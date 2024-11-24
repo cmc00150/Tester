@@ -9,6 +9,7 @@ sed -i 's/ - /;/g' ${1} # Cambiamos el formato de separación de ' - ' a ';' y l
 
 archivo=${1}
 aciertos=0
+posicion=0
 total=$(wc -l $archivo | cut -d ' ' -f1)
 
 while IFS= read -r linea # Cogemos una linea del archivo seleccionado
@@ -16,11 +17,13 @@ do
 	if [[ -z "$linea" ]]; then # Si la linea está vacía pasa a la siguiente
 		continue
 	fi
-	
+
+	$((posicion++)) # Aumentamos la posición donde nos encontramos
+ 
 	pregunta=$(echo "$linea" | cut -d ';' -f1) # Almacenamos la pregunta (se puede observar que utilizamos como delimitador el ';'
 	solucion=$(echo "$linea" | cut -d ';' -f2) # Ahora la solución
 	
-	echo "${BLANCA}$pregunta"
+	echo "[$(( (posicion/total) * 100 ))%] - ${BLANCA}$pregunta"
 	
   	read -p "${BLANCO}(V/F):" respuesta < /dev/stdout
 	
