@@ -59,7 +59,6 @@ La máquina Bombe fue utilizada por los criptólogos británicos para descifrar 
 La máquina Bombe fue utilizada por los criptólogos británicos para descifrar los mensajes enviados con la máquina Enigma mediante la búsqueda de patrones en el mensaje cifrado para poder obtener la configuración de los rotores a través del cálculo del MCD. - Falso
 La máquina Bombe fue utilizada por los criptólogos británicos para descifrar los mensajes enviados con la máquina Enigma mediante la búsqueda de patrones en el mensaje cifrado para poder obtener la configuración de los rotores a través del cálculo del MCM. - Falso
 La combinación de rotores era un aspecto fundamental en la configuración de la máquina para el cifrado/descifrado de los mensajes donde los rotores contaban con una posición fija en cualquier cifrado. - Falso
-La máquina Enigma es un sistema de cifrado inventado por los alemanes en la 2º Guerra Mundial con el objetivo de intercambiar mensajes cifrados simétricos entre sus tropas. - Verdadero
 En el vídeo nos muestran que tras una hipótesis inicial de plugboard, si aparece una contradicción, todas las hipótesis que provienen de la inicial se consideran contradicción. - Verdadero
 El plugboard de la máquina Enigma es el sistema frontal de intercambio de letras que permitía añadir gran complejidad al cifrado de mensajes y el orden en el cableado permite el cifrado asimétrico. - Falso
 El británico Alan Turing y el alemán Gordon Welchman fueron los principales artífices de la máquina Bombe. - Falso
