@@ -64,7 +64,6 @@ El plugboard de la máquina Enigma es el sistema frontal de intercambio de letra
 El británico Alan Turing y el alemán Gordon Welchman fueron los principales artífices de la máquina Bombe. - Falso
 El error de Enigma que permitió que su sistema fuera descifrado fue que una letra nunca se traduciría a sí misma. - Verdadero
 El plugboard de la máquina Enigma es el sistema frontal de intercambio de letras que permitía añadir gran complejidad al cifrado de mensajes y, por ejemplo, si conectas un cable con el par BH esto implica que al pulsar una B se modifica por una H en la entrada exclusivamente. - Falso
-El plugboard de la máquina es el sistema frontal de intercambio de letras que permitía añadir gran complejidad al cifrado de mensajes y permite conectar dos letras con el mismo cable. - Falso
 SHA (Secure Hash Algorithm) son un conjunto de funciones de hash para cifrado simétrico de mensajes. - Falso
 Las operaciones de la ronda estándar para el algoritmo AES son SubBytes, ShiftRows, AddRoundKey y MixColumns. - Verdadero
 Las operaciones de la ronda estándar para el algoritmo AES son SubBytes, ShiftRows y MixColumns. - Falso
