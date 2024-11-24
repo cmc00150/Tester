@@ -22,9 +22,9 @@ do
 	
 	echo "${BLANCA}$pregunta"
 	
-#	read -p "${BLANCO}(V/F):" respuesta < /dev/stdout
+  	read -p "${BLANCO}(V/F):" respuesta < /dev/stdout
 	
-	if [[ "${solucion:0:1}" == "V" ]] #"$respuesta" ]]
+	if [[ "${solucion:0:1}" == "${respuesta}" ]] #"$respuesta" ]]
 	then 
 		echo -e "${VERDE}Respuesta correcta\n"
 		((aciertos++))
