@@ -20,8 +20,8 @@ do
 
 	((posicion++)) # Aumentamos la posición donde nos encontramos
  
-	pregunta=$(echo "$linea" | cut -d ';' -f1) # Almacenamos la pregunta (se puede observar que utilizamos como delimitador el ';'
-	solucion=$(echo "$linea" | cut -d ';' -f2) # Ahora la solución
+	pregunta=$(echo "$linea" | cut -d '|' -f1) # Almacenamos la pregunta (se puede observar que utilizamos como delimitador el ';'
+	solucion=$(echo "$linea" | cut -d '|' -f2) # Ahora la solución
 	
 	echo "[$(( (posicion/total) * 100 ))%] - ${BLANCA}$pregunta"
 	
