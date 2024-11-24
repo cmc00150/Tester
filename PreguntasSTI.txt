@@ -125,8 +125,7 @@ Fail2ban posee un mecanismo configurable (jail.conf) donde se especifica por cu�
 En Fail2ban con el comando (sudo fail2ban-client status) podremos ver los filtros (jails) que están activos y configurarlos. - Verdadero
 En Fail2ban con el comando (sudo fail2ban-client status ssh) se muestra su información relativa al estado del filtro SSH. - Verdadero
 Un buen generador de números aleatorios es aquel que genera sucesiones de números que se asemejan a realizaciones de una variable aleatoria que sigue una distribución normal. - Falso
-Es un generador pseudo-aleatorio basado en congruencias del tipo 
-x_𝑛+1=a𝑥_𝑛 + 𝑐 mod 𝑚. Si a=1, entonces el generador obtenido es realmente aleatorio. - Falso
+Es un generador pseudo-aleatorio basado en congruencias del tipo x_𝑛+1=a𝑥_𝑛 + 𝑐 mod 𝑚. Si a=1, entonces el generador obtenido es realmente aleatorio. - Falso
 El test chi-cuadrado nos permite determinar si una posible secuencia de números sigue una distribución uniforme. - Verdadero
 Para determinar si una secuencia de valores es aleatoria, se utiliza el test T de Student. - Falso
 Un buen generador de números aleatorios es aquel que genera sucesiones de números que se asemejan a realizaciones de una variable aleatoria que sigue una distribución uniforme. - Verdadero
