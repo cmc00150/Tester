@@ -136,17 +136,15 @@ Para asegurar la reproducibilidad en una aplicación que utiliza números pseudo
 Los números pseudo-aleatorios deben usarse en aplicaciones críticas, como la criptografía. - Falso
 La sucesión de estados en un generador de números pseudo-aleatorios no es periódica porque trabaja con un conjunto infinito de estados. - Falso
 La página web random.org nos permite obtener números realmente aleatorios. - Verdadero
-En un generador pseudo-aleatorio basado en congruencias, se produce un ciclo cuando un número de la secuencia se repite. - Verdadero
+ se repite. - Verdadero
 Las características de la aleatoriedad dependen de una serie de números y no de un número en sí. - Verdadero
 El test chi-cuadrado nos permite determinar si una posible secuencia de números sigue una distribución uniforme. - Verdadero
 Para determinar si una secuencia de valores es aleatoria, se utiliza el test T de Student. - Falso
 Un buen generador de números aleatorios es aquel que genera sucesiones de números que se asemejan a realizaciones de una variable aleatoria que sigue una distribución uniforme. - Verdadero
 Un generador de números pseudo-aleatorios genera una sucesión de valores mediante una relación de recurrencia. - Verdadero
 Si el test chi-cuadrado del software ent, aplicado a una posible secuencia de números aleatorios, nos devuelve un porcentaje del 99%, la secuencia puede ser considerada con total seguridad aleatoria. - Falso
-En un generador pseudo-aleatorio basado en congruencias, se produce un ciclo cuando un número de la secuencia se repite. - Verdadero
 Para asegurar la reproducibilidad en una aplicación que utiliza números pseudo-aleatorios, la semilla debe cambiarse en cada ejecución. - Falso
 Los números pseudo-aleatorios deben usarse en aplicaciones críticas, como la criptografía. - Falso
 La sucesión de estados en un generador de números pseudo-aleatorios no es periódica porque trabaja con un conjunto infinito de estados. - Falso
 La página web random.org nos permite obtener números realmente aleatorios. - Verdadero
-En un generador pseudo-aleatorio basado en congruencias, se produce un ciclo cuando un número de la secuencia se repite. - Verdadero
 Las características de la aleatoriedad dependen de una serie de números y no de un número en sí. - Verdadero
