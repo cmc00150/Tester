@@ -25,7 +25,7 @@ Para descargar las claves públicas de otras personas conociendo su identificado
 Para buscar claves en nuestro servidor podemos utilizar tanto el identificador hexadecimal como el identificador del usuario. - Verdadero
 PGP (Pretty Good Privacy) incorpora un sistema de gestión de claves, que se organizan en anillos, uno para las claves públicas y otro para las privadas. - Verdadero
 GnuPG es la única implementación del protocolo PGP (Pretty Good Privacy) y suele venir instalado por defecto en la mayoría de distribuciones Linux. - Falso
-Una vez firmada la clave pública de otra persona, deberemos actualizarla en el servidor con el fin de que otros usuarios puedan ver nuestra firma, y aumentar su nivel de confianza sobre la autenticidad de la clave. - Verdadero
+Una vez firmada la clave pública de otra persona, deberemos actualizarla en el servidor con el fin de que otros usuarios puedan ver su firma, y aumentar su nivel de confianza sobre la autenticidad de la clave. - Verdadero
 Utilizaremos el siguiente comando (gpg -d) para cifrar un archivo binario. - Falso
 Con el fin de comprobar si la clave ha sido exportada correctamente utilizaremos (gpg). - Falso
 Al utilizar la orden (gpg --import), el fichero puede contener una sola clave o varias a la vez, pertenecientes a la misma o a diferentes personas. - Verdadero
