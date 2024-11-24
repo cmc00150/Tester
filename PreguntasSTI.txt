@@ -92,7 +92,7 @@ Mediante la orden (echo -n “Password” | md5sum | tr -d “-” >> target.txt
 El método Diceware permite crear frases de contraseñas usando como mínimo un dado como generador de números aleatorios. - Verdadero
 Hashcat es un descifrador de contraseñas basado en CPU que permite descifrar contraseñas previamente cifradas exclusivamente con el algoritmo MD5. - Falso
 La mayor parte de gestores de contraseñas incorpora herramientas para la actualización automática de nuestras contraseñas almacenadas. - Falso
-La entropía de una contraseña marca el número total de intentos para adivinar nuestra contraseña mediante el algoritmo de fuerza bruta. - Verdadero
+La entropía de una contraseña marca el número total de intentos para adivinar nuestra contraseña mediante el algoritmo de fuerza bruta. - Falso
 La entropía se calcula realizando el logaritmo en base 2 de la cantidad de elementos de la población por la longitud de la contraseña. - Verdadero
 Mediante la orden (hashcat -m 0 -a 0 -o cracked.txt target.txt /usr/share/wordlist/rockyou.txt) siempre se consigue romper las contraseñas de target.txt. - Falso
 Sal es una cadena aleatoria que se concatena con la contraseña, que obliga al atacante a repetir todos los cálculos para una de las posibles contraseñas de su diccionario. - Verdadero
