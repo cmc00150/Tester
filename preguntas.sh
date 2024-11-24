@@ -18,7 +18,7 @@ do
 		continue
 	fi
 
-	$((posicion++)) # Aumentamos la posición donde nos encontramos
+	((posicion++)) # Aumentamos la posición donde nos encontramos
  
 	pregunta=$(echo "$linea" | cut -d ';' -f1) # Almacenamos la pregunta (se puede observar que utilizamos como delimitador el ';'
 	solucion=$(echo "$linea" | cut -d ';' -f2) # Ahora la solución
@@ -27,7 +27,7 @@ do
 	
   	read -p "${BLANCO}(V/F):" respuesta < /dev/stdout
 	
-	if [[ "${solucion:0:1}" == "${respuesta}" ]] # Comprueba si la primera letra de la solución (Verdadero o Falso) coincide con la respuesta (V o F)
+	if [[ $(echo "${solucion:0:1}" | tr '[:lower:]' '[:upper:]' ) == $(echo "${respuesta}" | tr '[:lower:]' '[:upper:]' ) ]] # Pasamos ambos de minúscular a mayusculas para que tengan el mismo formato y lo comparamos
 	then 
 		echo -e "${VERDE}Respuesta correcta\n"
 		((aciertos++))
