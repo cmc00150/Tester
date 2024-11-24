@@ -24,7 +24,7 @@ do
 	
   	read -p "${BLANCO}(V/F):" respuesta < /dev/stdout
 	
-	if [[ "${solucion:0:1}" == "${respuesta}" ]] #"$respuesta" ]]
+	if [[ "${solucion:0:1}" == "${respuesta}" ]] # Comprueba si la primera letra de la solución (Verdadero o Falso) coincide con la respuesta (V o F)
 	then 
 		echo -e "${VERDE}Respuesta correcta\n"
 		((aciertos++))
@@ -33,11 +33,11 @@ do
 	fi
 done < "${archivo}"
 
-echo "La puntuación es: "$(( ($aciertos / $total) * 100 ))
-echo "------ Puntación ------"
-echo "Aciertos: $aciertos"
-echo "Fallos: "$(( $total-$aciertos ))
-echo "Aciertos si los fallos restan: "$(( $aciertos - ($total-$aciertos) / 4))
+echo "La puntuación es: "$(( ($aciertos / $total) * 100 )) # Lo muestra sobre 100
+echo "------ Detalles ------"
+echo "Aciertos: $aciertos" # Muestra los aciertos
+echo "Fallos: "$(( $total-$aciertos )) # Muestra los fallos (total-aciertos)
+echo "Aciertos si los fallos restan: "$(( $aciertos - ($total-$aciertos) / 4)) # Muestra los aciertos suponiendo que cada 4 fallos quitan un acierto
 
 
 sed -i 's/;/ - /g' ${1} # Volmemos a cambiar el formato de las preguntas para dejarlo como estaba
