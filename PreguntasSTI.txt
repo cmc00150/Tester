@@ -1,0 +1,155 @@
+Puede llegar un caso en que varias vulnerabilidades tengan asociados un mismo CVE-ID. - Falso
+Para que una vulnerabilidad recién descubierta sea incorporada al listado CVE, debe seguir un proceso que consta de 3 etapas: Etapa de presentación inicial y tratamiento, etapa de candidatura y etapa de publicación. - Verdadero
+Las actualizaciones de un sistema son un mero capricho del desarrollador. No solucionan errores, ni vulnerabilidades de tipo 0day. - Falso
+Un malware solo puede ser incrustado en un sistema utilizando medios físicos. - Falso
+Bugtrap, BackTrack y Katrina son distribuciones de pentesting y análisis forense. - Verdadero
+El proceso para realizar el pentesting se conforma de 5 fases: recopilación de información, análisis de vulnerabilidades, explotación, post-explotación y reporte de informes. - Verdadero
+La lista Seclist-org Full Disclosure Mailing List publica información detallada de vulnerabilidades y técnicas de explotación de sistemas. - Verdadero
+Un exploit 0day es el método que usan los hackers para atacar sistemas con una vulnerabilidad anteriormente no identificada. - Verdadero
+El NVD no incluye bases de datos de referencias de listas de verificación de seguridad, fallas de software relacionadas con la seguridad, configuraciones incorrectas, nombres de productos y métricas de impacto. - Falso
+Los pentesting se clasifican en función de la información conocida por el pentester antes de elaborar el test. Podemos encontrar 4 tipos: Caja blanca, caja roja, caja gris y caja negra. - Falso
+El administrador de un sistema basado en Tecnologías de la información debe conocer sus posibles vulnerabilidades así como los medios adecuados para reducir los riesgos asociados a las mismas. - Verdadero
+Los componentes principales de Metasploit se pueden resumir en: msfconsole, módulos y herramientas. - Verdadero
+Los pentesting se clasifican en función de la información conocida por el pentester antes de elaborar el test. Podemos encontrar 3 tipos: Caja blanca, caja gris y caja negra. - Verdadero
+En la lista Full Disclosure se revelan todo tipo de detalles sobre problemas de seguridad en cuanto este es conocido. - Verdadero
+CVE-YYYY-NNNN es el formato que siguen todas las vulnerabilidades candidatas a entrar en el CVE. - Falso
+Aunque los autores de un sistema detecten una vulnerabilidad y desarrollen el parche de seguridad correspondiente, el exploit puede seguir explotando dicha vulnerabilidad. - Falso
+El NVD es el repositorio del gobierno de EEUU de datos de gestión de vulnerabilidades basados en estándares representados mediante el protocolo de automatización de contenido de seguridad (SCAP). - Verdadero
+En cuanto a los pentesting de caja blanca, al realizar el test no se cuenta con información alguna sobre la aplicación, sistema o arquitectura. - Falso
+Si un exploit es una vulnerabilidad, el contenido que causa el daño en el sistema utilizando dicha vulnerabilidad se denomina payload. - Verdadero
+Para exportar la clave privada generada y usarla en otro computador utilizaremos la orden (gpg -a -ea --export). - Falso
+GnuPG nos permite firmar digitalmente tanto ficheros como mensajes de texto mediante la orden (gpg -e). - Falso
+GPG solo permite eliminar la clave privada una vez que su correspondiente clave pública haya sido eliminada del sistema. - Falso
+Si ejecutamos en la terminal la siguiente orden (gpg -a --export), se exportará nuestra clave privada en formato ASCII. - Falso
+Para descargar las claves públicas de otras personas conociendo su identificador hexadecimal basta con ejecutar (gpg --keyserver http://keyserver.ubuntu.com:80 --recv-keys <id>). - Verdadero
+Para buscar claves en nuestro servidor podemos utilizar tanto el identificador hexadecimal como el identificador del usuario. - Verdadero
+PGP (Pretty Good Privacy) incorpora un sistema de gestión de claves, que se organizan en anillos, uno para las claves públicas y otro para las privadas. - Verdadero
+GnuPG es la única implementación del protocolo PGP (Pretty Good Privacy) y suele venir instalado por defecto en la mayoría de distribuciones Linux. - Falso
+Una vez firmada la clave pública de otra persona, deberemos actualizarla en el servidor con el fin de que otros usuarios puedan ver nuestra firma, y aumentar su nivel de confianza sobre la autenticidad de la clave. - Verdadero
+Utilizaremos el siguiente comando (gpg -d) para cifrar un archivo binario. - Falso
+Con el fin de comprobar si la clave ha sido exportada correctamente utilizaremos (gpg). - Falso
+Al utilizar la orden (gpg --import), el fichero puede contener una sola clave o varias a la vez, pertenecientes a la misma o a diferentes personas. - Verdadero
+gpg --import nos permite importar nuestra clave pública. - Verdadero
+Mediante la orden gpg --keyserver http://keyserver.ubuntu.com:80 --recv-keys, se actualizan las claves públicas de nuestro anillo con todas las nuevas firmas que haya en el servidor, y subimos las firmas que nosotros hayamos añadido. - Falso
+Para eliminar una clave pública, es necesario primero eliminar su clave privada correspondiente. - Verdadero
+PGP (Pretty Good Privacy) es un programa que permite cifrar nuestra información utilizando solamente técnicas criptográficas asimétricas. - Falso
+Para descifrar, GnuPG únicamente te solicitará su contraseña. - Verdadero
+Para crear una firma digital separada del fichero original, el cual queda intacto, utilizamos (gpg -s). - Falso
+Una huella digital está formada por 10 grupos de 4 caracteres cada uno. - Verdadero
+La orden gpg --clearsign crea una firma digital en modo texto. - Verdadero
+El comando gpg --list-keys listará todas las claves privadas instaladas en el anillo de claves. - Verdadero
+Al cifrar un archivo con Vigenere desaparecen siempre los espacios en blanco y los caracteres de puntuación. - Falso
+El operador de MCD y MCM se emplean en el ataque de Kasiski. - Falso
+Si ciframos el mensaje “esto es una prueba” con la clave hola nos aparece el mensaje LHEOLHFNHECULPL con el lenguaje Z27 en español. - Verdadero
+CriptoTool implementa múltiples operadores matemáticos como primalidad, módulos, MCD, MCM, etc. - Verdadero
+El desplazamiento puro es un tipo de cifrado por sustitución monoalfabético y consiste en el desplazamiento de n espacios hacia la derecha (cifrado) o hacia la izquierda (descifrado) de los caracteres del texto en claro, siguiendo una ecuación basada en módulo. - Verdadero
+El criptoanálisis de Vigenere se analiza mediante el método Kasiski para obtener la longitud de la clave, en combinación con la regla PSO. - Falso
+En el alfabeto Z36 inglés podemos encontrar todas las letras en mayúscula y minúscula, junto con los números del 0 al 9. - Falso
+La herramienta de criptoanálisis permite trabajar con distintos alfabetos como el Español Z37, inglés Z36 y ASCII 191, exclusivamente. - Falso
+El alfabeto ASCII de 191 contiene la mayoría de caracteres imprimibles como mayúsculas, minúsculas, caracteres con puntuación, etc. - Verdadero
+CriptoTool es una herramienta de aprendizaje interactivo sobre criptografía avanzada. - Falso
+El cifrado por Vigenere es un criptosistema polialfabético que usa una clave de longitud L y cifra carácter a carácter. Cuando la clave es más corta que el texto a cifrar/descifrar, ésta se repite. - Verdadero
+El MCD se emplea en el ataque de Kasiski para conocer el tamaño de la clave condicionado a las cadenas que se repiten y su separación. - Verdadero
+El principal responsable de descifrar Enigma fue Alan Turing junto a la ayuda del equipo de trabajo de la escuela gubernamental de códigos y cifrado británico (formado en gran parte por polacos) y Joan Clarke. - Verdadero
+La máquina Enigma es un sistema de cifrado inventado por los alemanes en la 2º Guerra Mundial con el objetivo de intercambiar mensajes cifrados asimétricos entre sus tropas. - Falso
+El principal responsable de descifrar Enigma fue Alan Turing. - Verdadero
+El plugboard de la máquina Enigma es el sistema frontal de intercambio de letras que permitía añadir gran complejidad al cifrado de mensajes y permite conectar 10 cables a un par de letras en cada. - Verdadero
+El error de Enigma que permitió que su sistema fuera descifrado fue que tenían todas las configuraciones de la máquina en un papel. - Falso
+La máquina Bombe fue utilizada por los criptólogos británicos para descifrar los mensajes enviados con la máquina Enigma a través de una cadena de deducciones lógicas para obtener la configuración de los rotores de la máquina. - Verdadero
+La máquina Bombe fue utilizada por los criptólogos británicos para descifrar los mensajes enviados con la máquina Enigma mediante la búsqueda de patrones en el mensaje cifrado para poder obtener la configuración de los rotores a través del cálculo del MCD. - Falso
+La máquina Bombe fue utilizada por los criptólogos británicos para descifrar los mensajes enviados con la máquina Enigma mediante la búsqueda de patrones en el mensaje cifrado para poder obtener la configuración de los rotores a través del cálculo del MCM. - Falso
+La combinación de rotores era un aspecto fundamental en la configuración de la máquina para el cifrado/descifrado de los mensajes donde los rotores contaban con una posición fija en cualquier cifrado. - Falso
+La máquina Enigma es un sistema de cifrado inventado por los alemanes en la 2º Guerra Mundial con el objetivo de intercambiar mensajes cifrados simétricos entre sus tropas. - Verdadero
+En el vídeo nos muestran que tras una hipótesis inicial de plugboard, si aparece una contradicción, todas las hipótesis que provienen de la inicial se consideran contradicción. - Verdadero
+El plugboard de la máquina Enigma es el sistema frontal de intercambio de letras que permitía añadir gran complejidad al cifrado de mensajes y el orden en el cableado permite el cifrado asimétrico. - Falso
+El británico Alan Turing y el alemán Gordon Welchman fueron los principales artífices de la máquina Bombe. - Falso
+El error de Enigma que permitió que su sistema fuera descifrado fue que una letra nunca se traduciría a sí misma. - Verdadero
+El plugboard de la máquina Enigma es el sistema frontal de intercambio de letras que permitía añadir gran complejidad al cifrado de mensajes y, por ejemplo, si conectas un cable con el par BH esto implica que al pulsar una B se modifica por una H en la entrada exclusivamente. - Falso
+El plugboard de la máquina es el sistema frontal de intercambio de letras que permitía añadir gran complejidad al cifrado de mensajes y permite conectar dos letras con el mismo cable. - Falso
+SHA (Secure Hash Algorithm) son un conjunto de funciones de hash para cifrado simétrico de mensajes. - Falso
+Las operaciones de la ronda estándar para el algoritmo AES son SubBytes, ShiftRows, AddRoundKey y MixColumns. - Verdadero
+Las operaciones de la ronda estándar para el algoritmo AES son SubBytes, ShiftRows y MixColumns. - Falso
+En la etapa inicial del algoritmo AES se emplea únicamente la operación ShiftRows. - Falso
+Después de aplicar la ronda final del algoritmo AES a un bloque se obtiene la subclave del bloque inicial cifrada. - Falso
+Los módulos SubBytes se encargan de dividir la entrada en Bytes y combinarlos usando una transformación lineal. - Falso
+El número de rondas del algoritmo AES es 12 para claves de 128-bit, 13 para claves de 192-bit y 14 para 256-bit. - Falso
+El número de rondas del algoritmo AES es 14 para claves de 128-bit, 16 para claves de 192-bit, y 18 para 256-bit. - Falso
+En la etapa inicial del algoritmo AES se emplean la operación AddRoundKey y ShiftRows. - Falso
+Los algoritmos MD5 y SHA1 son algoritmos cuánticos. - Falso
+El esquema general del algoritmo AES está formado por una etapa inicial cíclica, una central y una final no cíclicas. - Falso
+El número de rondas del algoritmo AES es 10 para claves de 128-bit, 12 para claves de 192-bit y 14 para 256-bit. - Verdadero
+El esquema general del algoritmo AES está formado por una etapa inicial, una central y una final, todas ellas no cíclicas. - Falso
+El algoritmo de hashing inicial MD5 convierte los datos (independientemente de su tamaño) en una cadena de 32 caracteres. - Verdadero
+En la etapa inicial del algoritmo AES se emplean la operación AddRoundKey y ShiftRows dos veces. - Falso
+En el proceso de la operación AddRoundKey una entrada con todo “00” salvo la diagonal con todos sus valores a “0F” y una clave completa a valores de “FF” nos devuelve la misma matriz que la entrada. - Falso
+El esquema general del algoritmo AES está formado por una etapa inicial, una central y una final, donde la central es cíclica. - Verdadero
+En la etapa inicial del algoritmo AES se emplea únicamente la operación AddRoundKey. - Falso
+La matriz estado de algoritmo AES es un bloque formado por segmentos que se agrupan en tamaño de matriz 4x4 donde cada casilla tiene una parte del mensaje igual a 1024 bits. - Falso
+El módulo SubBytes se encarga de dividir la entrada en Bytes y pasar cada uno a través de una caja de sustitución. - Verdadero
+Después de aplicar la ronda final del algoritmo AES a un bloque se obtiene el bloque cifrado. - Verdadero
+La etapa final del algoritmo AES está compuesta por 3 operaciones: AddRoundKey, ShiftRows, SubBytes. - Verdadero
+El esquema general del algoritmo AES está formado por una etapa inicial y una final. - Verdadero
+En el método Diceware cada palabra corresponde a un total de cinco dígitos. - Verdadero
+Mediante la orden (echo -n “Password” | md5sum | tr -d “-” >> target.txt) somos capaces de romper contraseñas de target.txt. - Falso
+El método Diceware permite crear frases de contraseñas usando como mínimo un dado como generador de números aleatorios. - Verdadero
+Hashcat es un descifrador de contraseñas basado en CPU que permite descifrar contraseñas previamente cifradas exclusivamente con el algoritmo MD5. - Falso
+La mayor parte de gestores de contraseñas incorpora herramientas para la actualización automática de nuestras contraseñas almacenadas. - Falso
+La entropía de una contraseña marca el número total de intentos para adivinar nuestra contraseña mediante el algoritmo de fuerza bruta. - Verdadero
+La entropía se calcula realizando el logaritmo en base 2 de la cantidad de elementos de la población por la longitud de la contraseña. - Verdadero
+Mediante la orden (hashcat -m 0 -a 0 -o cracked.txt target.txt /usr/share/wordlist/rockyou.txt) siempre se consigue romper las contraseñas de target.txt. - Falso
+Sal es una cadena aleatoria que se concatena con la contraseña, que obliga al atacante a repetir todos los cálculos para una de las posibles contraseñas de su diccionario. - Verdadero
+Si incluimos en nuestra contraseña mayúsculas, minúsculas, números y símbolos, la entropía de nuestra contraseña será mayor puesto que la población de caracteres usados es mucho mayor. - Verdadero
+SuperGenPass a diferencia del resto de gestores de contraseñas, siempre almacena sus contraseñas en el disco con el fin de poder recuperarlas. - Falso
+Mediante el uso de códigos leet utilizamos caracteres alfanuméricos para generar contraseñas fáciles de leer para las personas pero ilegibles para las máquinas en muchos casos. - Verdadero
+La entropía de una contraseña es inversamente proporcional a la población de caracteres utilizados en la contraseña. - Falso
+En el método Diceware, para cada palabra que forme tu contraseña se requieren 6 lanzamientos del dado. - Falso
+Existen diversas listas de palabras disponibles en diferentes idiomas para el método de generación de contraseñas Diceware. Cada lista tiene un número diferente de símbolos. - Falso
+La función lstrcmp sirve para comparar cadenas. - Verdadero
+Los productos más comunes sometidos a la ingeniería inversa son los software de Microsoft y Dell. - Falso
+Los desensambladores son herramientas que convierten código máquina en lenguaje legible a humanos. - Falso
+OllyDbg permite la obtención de todo el código fuente de una aplicación. - Falso
+La ingeniería inversa facilita la realización de prototipos y disminuye el costo al desarrollar nuevos productos. - Verdadero
+El software de OllyDbg nos permite analizar los valores de los registros de la memoria. - Verdadero
+La herramienta OllyDbg para Windows y Linux es un depurador de código ensamblador muy empleado en auditoría informática para detectar los agujeros de seguridad de una herramienta. - Verdadero
+Los saltos condicionales son fundamentales para dirigir los programas hacia una u otra rutina concreta dentro del código de la ingeniería inversa de un programa. - Verdadero
+La ingeniería inversa podría utilizarse para aclarar las posibles responsabilidades ante reclamaciones legales por daños físicos y económicos. - Falso
+Entre los beneficios que se generan al hacer una ingeniería inversa se encuentra el recuperar y/o actualizar la información (cambios que no se documentaron en su momento). - Verdadero
+Sguil y Rootkit Hunter son aplicaciones que monitorizan el tráfico de red de una computadora, detectan y avisan de situaciones de anomalías. - Falsa
+Al ejecutar el siguiente código (find /usr/bin/ -type -exec shalsum{}  - ) en una terminal UNIX y redireccionar su salida a un fichero, podremos detectar anomalías. - Verdadero
+Los Sistemas de Detección de Intrusiones (IDS) analizan diferentes fuentes de información (tráfico de red, configuración del sistema, archivos de registros, etc.) y, mediante un mecanismo de decisión, usualmente basado en reglas, avisan si detectan alguna anomalía. - Verdadero
+Antes de arrancar la aplicación Sguil es de vital importancia habilitar el servicio de captura y análisis de paquetes. - Verdadero
+RootKit Hunter es un programa de detección de intrusiones basado en archivos de registro. - Falso
+Los Sistemas de Detección de Intrusiones (PTS) por sus siglas en inglés, permite saber si se ha producido (o se está produciendo) alguna intrusión en un sistema informático. - Falso
+Fail2ban posee un mecanismo configurable (/etc/hosts.deny) donde se especifica por cuánto tiempo se aplicará la actualización correspondiente a una IP. - Falso
+Mediante la orden (sudo nsm_server_restart) se habilita el servicio de captura y análisis de paquetes. - Verdadero
+En Fail2ban se aplican restricciones de acceso contra las IP extrusoras realizando su inclusión en el fichero /etc/hosts.deny.conf. - Verdadero
+Fail2ban posee un mecanismo configurable (jail.conf) donde se especifica por cuánto tiempo se aplicará la acción correspondiente sobre una IP tras detectarse un comportamiento anómalo. - Verdadero
+En Fail2ban con el comando (sudo fail2ban-client status) podremos ver los filtros (jails) que están activos y configurarlos. - Verdadero
+En Fail2ban con el comando (sudo fail2ban-client status ssh) se muestra su información relativa al estado del filtro SSH. - Verdadero
+Un buen generador de números aleatorios es aquel que genera sucesiones de números que se asemejan a realizaciones de una variable aleatoria que sigue una distribución normal. - Falso
+Es un generador pseudo-aleatorio basado en congruencias del tipo 
+x_𝑛+1=a𝑥_𝑛 + 𝑐 mod 𝑚. Si a=1, entonces el generador obtenido es realmente aleatorio. - Falso
+El test chi-cuadrado nos permite determinar si una posible secuencia de números sigue una distribución uniforme. - Verdadero
+Para determinar si una secuencia de valores es aleatoria, se utiliza el test T de Student. - Falso
+Un buen generador de números aleatorios es aquel que genera sucesiones de números que se asemejan a realizaciones de una variable aleatoria que sigue una distribución uniforme. - Verdadero
+Un generador de números pseudo-aleatorios genera una sucesión de valores mediante una relación de recurrencia. - Verdadero
+Si el test chi-cuadrado del software ent, aplicado a una posible secuencia de números aleatorios, nos devuelve un porcentaje del 99%, la secuencia puede ser considerada con total seguridad aleatoria. - Falso
+En un generador pseudo-aleatorio basado en congruencias, se produce un ciclo cuando un número de la secuencia se repite. - Verdadero
+Para asegurar la reproducibilidad en una aplicación que utiliza números pseudo-aleatorios, la semilla debe cambiarse en cada ejecución. - Falso
+Los números pseudo-aleatorios deben usarse en aplicaciones críticas, como la criptografía. - Falso
+La sucesión de estados en un generador de números pseudo-aleatorios no es periódica porque trabaja con un conjunto infinito de estados. - Falso
+La página web random.org nos permite obtener números realmente aleatorios. - Verdadero
+En un generador pseudo-aleatorio basado en congruencias, se produce un ciclo cuando un número de la secuencia se repite. - Verdadero
+Las características de la aleatoriedad dependen de una serie de números y no de un número en sí. - Verdadero
+El test chi-cuadrado nos permite determinar si una posible secuencia de números sigue una distribución uniforme. - Verdadero
+Para determinar si una secuencia de valores es aleatoria, se utiliza el test T de Student. - Falso
+Un buen generador de números aleatorios es aquel que genera sucesiones de números que se asemejan a realizaciones de una variable aleatoria que sigue una distribución uniforme. - Verdadero
+Un generador de números pseudo-aleatorios genera una sucesión de valores mediante una relación de recurrencia. - Verdadero
+Si el test chi-cuadrado del software ent, aplicado a una posible secuencia de números aleatorios, nos devuelve un porcentaje del 99%, la secuencia puede ser considerada con total seguridad aleatoria. - Falso
+En un generador pseudo-aleatorio basado en congruencias, se produce un ciclo cuando un número de la secuencia se repite. - Verdadero
+Para asegurar la reproducibilidad en una aplicación que utiliza números pseudo-aleatorios, la semilla debe cambiarse en cada ejecución. - Falso
+Los números pseudo-aleatorios deben usarse en aplicaciones críticas, como la criptografía. - Falso
+La sucesión de estados en un generador de números pseudo-aleatorios no es periódica porque trabaja con un conjunto infinito de estados. - Falso
+La página web random.org nos permite obtener números realmente aleatorios. - Verdadero
+En un generador pseudo-aleatorio basado en congruencias, se produce un ciclo cuando un número de la secuencia se repite. - Verdadero
+Las características de la aleatoriedad dependen de una serie de números y no de un número en sí. - Verdadero
