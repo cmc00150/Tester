@@ -142,7 +142,6 @@ El test chi-cuadrado nos permite determinar si una posible secuencia de números
 Para determinar si una secuencia de valores es aleatoria, se utiliza el test T de Student. - Falso
 Un buen generador de números aleatorios es aquel que genera sucesiones de números que se asemejan a realizaciones de una variable aleatoria que sigue una distribución uniforme. - Verdadero
 Un generador de números pseudo-aleatorios genera una sucesión de valores mediante una relación de recurrencia. - Verdadero
-Si el test chi-cuadrado del software ent, aplicado a una posible secuencia de números aleatorios, nos devuelve un porcentaje del 99%, la secuencia puede ser considerada con total seguridad aleatoria. - Falso
 Para asegurar la reproducibilidad en una aplicación que utiliza números pseudo-aleatorios, la semilla debe cambiarse en cada ejecución. - Falso
 Los números pseudo-aleatorios deben usarse en aplicaciones críticas, como la criptografía. - Falso
 La sucesión de estados en un generador de números pseudo-aleatorios no es periódica porque trabaja con un conjunto infinito de estados. - Falso
