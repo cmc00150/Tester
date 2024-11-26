@@ -5,8 +5,6 @@ if [ ${#} == 0 ]; then
 	exit
 fi
 
-sed -i 's/ - /|/g' ${1} # Cambiamos el formato de separación de ' - ' a ';' y lo SOBREESCRIBIMOS EN EL ARCHIVO
-
 archivo=${1}
 aciertos=0
 posicion=0
@@ -20,10 +18,10 @@ do
 
 	((posicion++)) # Aumentamos la posición donde nos encontramos
  
-	pregunta=$(echo "$linea" | cut -d '|' -f1) # Almacenamos la pregunta (se puede observar que utilizamos como delimitador el ';'
-	solucion=$(echo "$linea" | cut -d '|' -f2) # Ahora la solución
+	pregunta=${linea% - *} # Almacenamos la pregunta (eliminamos la cadena desde el final hasta ' - ')
+	solucion=${liena# - *} # Ahora la solución (desde el principio hasta el final
 	
-	awk -v a="$posicion" -v b="$total" 'BEGIN {printf "[%.0f%] - ",(a/b)*100}' # Muestra [x%] delante de la pregunta para mostrar el progreso
+	awk -v a="$posicion" -v b="$total" 'BEGIN {printf "[%.0f] - ",(a/b)*100}' # Muestra [x%] delante de la pregunta para mostrar el progreso
 	echo $pregunta # Muestra la pregunta
 
   	read -p "${BLANCO}(V/F):" respuesta < /dev/stdout
@@ -42,6 +40,3 @@ echo "------ Detalles ------"
 echo "Aciertos: $aciertos" # Muestra los aciertos
 echo "Fallos: "$(( $total-$aciertos )) # Muestra los fallos (total-aciertos)
 echo "Aciertos si los fallos restan: "$(( $aciertos - ($total-$aciertos) / 4)) # Muestra los aciertos suponiendo que cada 4 fallos quitan un acierto
-
-
-sed -i 's/|/ - /g' ${1} # Volmemos a cambiar el formato de las preguntas para dejarlo como estaba
