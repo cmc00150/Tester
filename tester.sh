@@ -1,4 +1,10 @@
 #!/bin/bash
+ROJO='\e[0;31m'
+BLANCO='\e[1;37m'
+VERDE='\e[0;32m'
+FELIZ='\U1F604'
+TRISTE='\U1F622'
+
 
 if [ ${#} == 0 ]; then
 	echo "Error en los argumentos"
@@ -23,17 +29,18 @@ do
 	pregunta=$(echo "$linea" | cut -d '|' -f1) # Almacenamos la pregunta (se puede observar que utilizamos como delimitador el ';'
 	solucion=$(echo "$linea" | cut -d '|' -f2) # Ahora la solución
 	
-	awk -v a="$posicion" -v b="$total" 'BEGIN {printf "[%.0f%] - ",(a/b)*100}' # Muestra [x%] delante de la pregunta para mostrar el progreso
-	echo $pregunta # Muestra la pregunta
+	#awk -v a="$posicion" -v b="$total" 'BEGIN {printf "[%.0f%] - ",(a/b)*100}' # Muestra [x%] delante de la pregunta para mostrar el progreso
+	echo -e "${BLANCO} $pregunta" # Muestra la pregunta
 
-  	read -p "${BLANCO}(V/F):" respuesta < /dev/stdout
+
+  	read -p "(V/F):" respuesta < /dev/stdout
 	
 	if [[ $(echo "${solucion:0:1}" | tr '[:lower:]' '[:upper:]' ) == $(echo "${respuesta}" | tr '[:lower:]' '[:upper:]' ) ]] # Pasamos ambos de minúscular a mayusculas para que tengan el mismo formato y lo comparamos
 	then 
-		echo -e "${VERDE}Respuesta correcta\n"
+		echo -e "${VERDE}Respuesta correcta ${FELIZ} \n"
 		((aciertos++))
 	else
-		echo -e "${ROJO}Respuesta incorrecta, la solución era: $solucion\n"
+		echo -e "${ROJO}Respuesta incorrecta ${TRISTE} la solución era: $solucion\n"
 	fi
 done < "${archivo}"
 
