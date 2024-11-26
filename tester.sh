@@ -24,7 +24,6 @@ do
 	((posicion++)) # Aumentamos la posición donde nos encontramos
  
 	pregunta=${linea% - *} # Almacenamos la pregunta (eliminamos la cadena desde el final hasta ' - ')
-	printf -v solucion "%.1s" ${linea# - *} # Ahora la solución (desde el principio hasta el final ) y mediante printf quitamos todas las letras menos la primera
 	printf -v solucion "%.1s" ${linea#* - } # Ahora la solución (desde el principio hasta el final ) y mediante printf quitamos todas las letras menos la primera
 	
 	printf "${BLANCO}$pregunta\n(V/F): "
