@@ -26,7 +26,7 @@ do
 	pregunta=${linea% - *} # Almacenamos la pregunta (eliminamos la cadena desde el final hasta ' - ')
 	printf -v solucion "%.1s" ${linea# - *} # Ahora la solución (desde el principio hasta el final ) y mediante printf quitamos todas las letras menos la primera
 	
-	printf "${BLANCO} $pregunta \n (V/F): "
+	printf "${BLANCO}$pregunta\n(V/F): "
   	read respuesta < /dev/stdout
 	
 	if [[ ${solucion^} == ${respuesta^} ]] # Pasamos ambos de minúscular a mayusculas para que tengan el mismo formato y lo comparamos
