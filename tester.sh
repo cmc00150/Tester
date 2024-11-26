@@ -24,13 +24,12 @@ do
 	((posicion++)) # Aumentamos la posición donde nos encontramos
  
 	pregunta=${linea% - *} # Almacenamos la pregunta (eliminamos la cadena desde el final hasta ' - ')
-	solucion=${linea# - *} # Ahora la solución (desde el principio hasta el final
- 	solucion=${linea^} # Ponemos la primera letra en mayusculas
+	printf -v solucion "%.1s" ${linea# - *} # Ahora la solución (desde el principio hasta el final ) y mediante printf quitamos todas las letras menos la primera
 	
 	printf "${BLANCO} $pregunta \n (V/F): "
   	read respuesta < /dev/stdout
 	
-	if [[ ${solucion:0:1} == ${respuesta^} ]] # Pasamos ambos de minúscular a mayusculas para que tengan el mismo formato y lo comparamos
+	if [[ ${solucion^} == ${respuesta^} ]] # Pasamos ambos de minúscular a mayusculas para que tengan el mismo formato y lo comparamos
 	then 
 		echo -e "${VERDE}Respuesta correcta ${FELIZ} \n"
 		((aciertos++))
