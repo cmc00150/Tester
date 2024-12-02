@@ -12,7 +12,7 @@ fi
 
 aciertos=0
 posicion=0
-total=$(wc -l $archivo | cut -d ' ' -f1)
+total=$(wc -l ${1} | cut -d ' ' -f1)
 
 ancho=$(tput cols) # Devuelve el ancho de la termial
 printf -v barra "%$((${ancho}-2))s" # Creamos tantos espacios como ancho sea el terminal
