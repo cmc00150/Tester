@@ -35,6 +35,9 @@ do
 	else
 		echo -e "${ROJO}Respuesta incorrecta ${TRISTE}, la solución era: $solucion\n"
 	fi
+
+  	sleep "1.3"
+   	clear
 done < "${1}"
 
 awk -v a="$aciertos" -v b="$total" 'BEGIN {printf "La puntuación final sobre 100 es: %.2f \n",(a/b)*100}' # Utilizamos awk porque tiene más precisión en la división
