@@ -10,7 +10,6 @@ if [ ${#} == 0 ]; then
 	exit
 fi
 
-archivo=${1}
 aciertos=0
 posicion=0
 total=$(wc -l $archivo | cut -d ' ' -f1)
@@ -36,7 +35,7 @@ do
 	else
 		echo -e "${ROJO}Respuesta incorrecta ${TRISTE}, la solución era: $solucion\n"
 	fi
-done < "${archivo}"
+done < "${1}"
 
 awk -v a="$aciertos" -v b="$total" 'BEGIN {printf "La puntuación final sobre 100 es: %.2f \n",(a/b)*100}' # Utilizamos awk porque tiene más precisión en la división
 echo "------ Detalles ------"
