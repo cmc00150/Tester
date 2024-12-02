@@ -10,10 +10,13 @@ if [ ${#} == 0 ]; then
 	exit
 fi
 
-archivo=${1}
 aciertos=0
 posicion=0
-total=$(wc -l $archivo | cut -d ' ' -f1)
+total=$(wc -l ${1} | cut -d ' ' -f1)
+
+ancho=$(tput cols) # Devuelve el ancho de la termial
+printf -v barra "%$((${ancho}-2))s" # Creamos tantos espacios como ancho sea el terminal
+barra=${barra// /#} # Sustituimos esos espacios por #
 
 while IFS= read -r linea # Cogemos una linea del archivo seleccionado
 do
@@ -22,7 +25,11 @@ do
 	fi
 
 	((posicion++)) # Aumentamos la posición donde nos encontramos
- 
+
+	porcentaje=$(( (${#barra} / ${total} ) * $posicion )) # Calculamos el número de # para representar el porcentaje
+ 	printf -v tramo "[%-${#barra}.$((${porcentaje}+1))s]" $barra # Alineamos a la izquierda y ponemos el resto a espacios
+  	echo "${tramo// /-}" # Sustituimos los espacios por los -
+  
 	pregunta=${linea% - *} # Almacenamos la pregunta (eliminamos la cadena desde el final hasta ' - ')
 	printf -v solucion "%.1s" ${linea#* - } # Ahora la solución (desde el principio hasta el final ) y mediante printf quitamos todas las letras menos la primera
 	
@@ -36,8 +43,19 @@ do
 	else
 		echo -e "${ROJO}Respuesta incorrecta ${TRISTE}, la solución era: $solucion\n"
 	fi
-done < "${archivo}"
+	
+	tiempo=1	
+	while [ $tiempo != 0 ]; do
+		tiempo=$(awk -v t="$tiempo" 'BEGIN {print t - 0.01}')
+		echo -ne "\rSiguiente pregunta ${tiempo} segundos."
+		sleep 0.0045
+	done
+	clear
+	
+	
+done < "${1}"
 
+echo -e "${BLANCO}"
 awk -v a="$aciertos" -v b="$total" 'BEGIN {printf "La puntuación final sobre 100 es: %.2f \n",(a/b)*100}' # Utilizamos awk porque tiene más precisión en la división
 echo "------ Detalles ------"
 echo "Aciertos: $aciertos" # Muestra los aciertos
