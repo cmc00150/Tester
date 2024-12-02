@@ -26,9 +26,9 @@ do
 
 	((posicion++)) # Aumentamos la posición donde nos encontramos
 
-	porcentaje=$(( ($posicion / ${#barra}) * $total )) # Calculamos el número de # para representar el porcentaje
- 	printf -v barra "[%-${#barra}.${porcentaje}s]" # Alineamos a la izquierda y ponemos el resto a espacios
-  	echo "${barra// /-}" # Sustituimos los espacios por los -
+	porcentaje=$(( (${#barra} / ${total} ) * $posicion )) # Calculamos el número de # para representar el porcentaje
+ 	printf -v tramo "[%-${#barra}.$((${porcentaje}+1))s]" $barra # Alineamos a la izquierda y ponemos el resto a espacios
+  	echo "${tramo// /-}" # Sustituimos los espacios por los -
   
 	pregunta=${linea% - *} # Almacenamos la pregunta (eliminamos la cadena desde el final hasta ' - ')
 	printf -v solucion "%.1s" ${linea#* - } # Ahora la solución (desde el principio hasta el final ) y mediante printf quitamos todas las letras menos la primera
@@ -43,11 +43,19 @@ do
 	else
 		echo -e "${ROJO}Respuesta incorrecta ${TRISTE}, la solución era: $solucion\n"
 	fi
-
-  	sleep "1.3"
-   	clear
+	
+	tiempo=1	
+	while [ $tiempo != 0 ]; do
+		tiempo=$(awk -v t="$tiempo" 'BEGIN {print t - 0.01}')
+		echo -ne "\rSiguiente pregunta ${tiempo} segundos."
+		sleep 0.0045
+	done
+	clear
+	
+	
 done < "${1}"
 
+echo -e "${BLANCO}"
 awk -v a="$aciertos" -v b="$total" 'BEGIN {printf "La puntuación final sobre 100 es: %.2f \n",(a/b)*100}' # Utilizamos awk porque tiene más precisión en la división
 echo "------ Detalles ------"
 echo "Aciertos: $aciertos" # Muestra los aciertos
