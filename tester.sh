@@ -7,7 +7,7 @@ TRISTE='\U1F622'
 
 function almacenarPreguntas()
 {
-	while read linea; do
+	while IFS= read -r linea; do
 		if [ -z "$linea" ]; then continue; fi # Si la linea está vacía pasa a la siguiente
 	
 		preguntas+=("$linea")  # Almacenamos las preguntas en el vector
@@ -16,6 +16,7 @@ function almacenarPreguntas()
 
 function mostrarBarraPorcentaje()
 {
+	local colorLetra=$(tput setaf 7)
 	local pocoRecorrido=$(tput setab 1)
 	local medioRecorrido=$(tput setab 3)
 	local altoRecorrido=$(tput setab 2)
@@ -27,18 +28,18 @@ function mostrarBarraPorcentaje()
 	local porcentaje=$(( (${#barra} / ${total} ) * $posicion )) # Calculamos el número de # para representar el porcentaje
 	printf -v tramo "[%-${#barra}.$((${porcentaje}+1))s]" $barra # Alineamos a la izquierda y ponemos el resto a espacios
 	
-	if [ $porcentaje -le $(($porcentaje/3)) ]; then
- 	  	echo -n "$pocoRecorrido"
+	if [ $porcentaje -le $(($ancho/3)) ]; then
+ 	  	echo -n $pocoRecorrido$colorLetra
  	fi
- 	if [ $porcentaje -gt $(($porcentaje/3)) ] && [ $porcentaje -le $(($porcentaje/3*2)) ]; then
- 	  	echo -n "$medioRecorrido"
+ 	if [ $porcentaje -gt $(($ancho/3)) ] && [ $porcentaje -le $(($ancho/3*2)) ]; then
+ 	  	echo -n $medioRecorrido$colorLetra
  	fi
- 	if [ $porcentaje -gt $(($porcentaje/3*2)) ]; then
- 	  	echo -n "$altoRecorrido"
+ 	if [ $porcentaje -gt $(($ancho/3*2)) ]; then
+ 	  	echo -n $altoRecorrido$colorLetra
  	fi
  	
 	printf "${tramo// /-}" # Sustituimos los espacios por los -
-	tput sgr0
+	tput sgr0 # Limpiamos el estilo
 }
 
 function mostrarPregunta()
@@ -78,7 +79,7 @@ function puntuacion()
 	echo "------ Puntuación ------"
 	awk -v a="$aciertos" -v b="$total" 'BEGIN {printf "Aciertos: %d - %.2f\n", a,  (a/b)*100}' # Aciertos (utilizamos awk porque tiene más precisión en la división)
 	awk -v a="$aciertos" -v b="$total" 'BEGIN {printf "Fallos: %d - %.2f\n", b-a,  ((b-a)/b)*100}' # Fallos
-	awk -v a="$aciertos" -v b="$total" 'BEGIN {printf "Aciertos si los fallos restan: %d - %.2f\n", a-((b-a)/4), ((a-((b-a)/4))/b)*100}' # Mostramos la punt. teniendo en cuenta la penalización
+	awk -v a="$aciertos" -v b="$total" 'BEGIN {printf "Aciertos si los fallos restan: %.1f - %.2f\n", a-((b-a)/4), ((a-((b-a)/4))/b)*100}' # Mostramos la punt. teniendo en cuenta la penalización
 }
 
 if [ ${#} -eq 0 ]; then
@@ -110,5 +111,3 @@ for pregunta in "${preguntas[@]}"; do
 done
 
 puntuacion
-
-
