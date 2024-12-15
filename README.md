@@ -1,10 +1,23 @@
 # Tester
 Se trata de un script en bash para estudiar con preguntas de verdadero o falso desde el terminal de bash en una distribución linux.
-# Uso
-### Argumentos
-Toma como parámetro el archivo donde se ecuentran las preguntas (ruta absoluta).
-### Formato de las preguntas
-- Deberan tener la forma "PREGUNTA - SOLUCIÓN", muy importante que el '-' **vaya separado** por dos espacios antes y después del mismo.
-- **No puede aparecer el carácter |** ya que es usado como delimitador y esto podría provocar un corte de la pregunta no deseado.
-- Deberán ser de una sola linea, es decir, no puede haber saltos de linea y por lo tanto la respuesta (verdadero o falso) deberá estar en la misma linea. _(si es totalmente necesario que el enunciado tenga saltos de linea, deberá hacerse mediante un salto de linea '\n' pero puede que el comportamiento se vea alterado)_
+## Uso
+#### 1. ⬇️ Instalacion
+Descarga el repositorio mediante `git clone https://github.com/cmc00150/Tester.git` en el directorio deseado o descargandolo como un **.zip** directamente al final del boton verde de _"code"_
+#### 2. ⚠️ Preparación del documento
+- Deberan tener la forma "PREGUNTA - SOLUCIÓN", muy importante que el '-' **vaya separado** por dos espacios antes y después del mismo ( - ).
+- Toda la pregunta deberá estar en la misma linea. _(si es totalmente necesario que el enunciado tenga saltos de linea, deberá hacerse mediante carácteres de escape \n)_
 - Al introducir operaciones matemáticas hay que asegurarse de que tengan un formato plano, para ello lo mejor es copiarla a mano con el teclado (en vez de copiar y pegar).
+#### 3. ✅ Ejecución
+Llamamos a la función _tester.sh_ (si estamos dentro de la carpeta descargada será `./tester.sh`) y le pasamos como argumento el documento. Por ejemplo: `./tester.sh PreguntasSTI.txt`
+## Opciones
+Actualmente hay 3 opciones a elegir:
+```sh
+./tester --random --penalty 3 --time 4 PreguntasSTI.txt
+```
+> Tip: Puedes poner './tester.sh' para ver las opciones en cualquier momento:
+```
+OPTIONS:
+  --random      Muestra las preguntas de forma aleatoria (default: ordenado)
+  --penalty     Establece cuantos fallos restan un acierto (default: 1)
+  --time        Configura el tiempo entre pregunta y pregunta (default: 1)
+```
