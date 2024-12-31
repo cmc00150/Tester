@@ -1,0 +1,50 @@
+Internet es un sistema completamente centralizado que facilita la seguridad. - Falso  
+El aumento de dispositivos conectados a Internet incrementa los riesgos de seguridad. - Verdadero  
+El control de accesos en Internet se complica debido a la disponibilidad de datos desde cualquier lugar. - Verdadero  
+Los protocolos de red actuales fueron diseñados teniendo en cuenta todas las necesidades de seguridad modernas. - Falso  
+Internet es insegura por naturaleza y requiere vigilancia constante para mejorar su seguridad. - Verdadero  
+La descentralización de Internet dificulta el control y la seguridad en su totalidad. - Verdadero  
+Los ordenadores secuestrados pueden ser usados para ataques DDoS o envío de spam. - Verdadero  
+La arquitectura OSI incluye servicios y mecanismos de seguridad para mitigar amenazas. - Verdadero  
+Un ataque pasivo se produce en forma de escucha y es muy difícil de detectar. - Verdadero  
+Los ataques activos incluyen la modificación o interrupción de los flujos de datos. - Verdadero  
+El cifrado es un mecanismo de seguridad esencial para garantizar la confidencialidad. - Verdadero  
+Los servicios de seguridad definidos en X.800 incluyen control de acceso y no repudio. - Verdadero  
+IPSec proporciona seguridad a nivel de red, gestionando la autenticación y confidencialidad. - Verdadero  
+El modo túnel de IPSec encapsula todo el paquete IP, incluida su cabecera. - Verdadero  
+El protocolo SSL garantiza la confidencialidad e integridad de las conexiones. - Verdadero  
+TLS es una evolución de SSL que mejora la seguridad y elimina componentes inseguros. - Verdadero  
+SSH es un protocolo diseñado para reemplazar servicios no seguros como telnet y rlogin. - Verdadero  
+PGP proporciona confidencialidad e integridad no orientada a conexión. - Verdadero  
+TOR garantiza el anonimato mediante túneles dinámicos y cifrado de extremo a extremo. - Verdadero  
+Los sistemas de detección de intrusiones (SDI) supervisan el funcionamiento del sistema en busca de anomalías. - Verdadero  
+Los sistemas de prevención de intrusiones (SPI) pueden bloquear ataques en tiempo real. - Verdadero  
+Los falsos positivos en un SDI son situaciones normales que el sistema detecta como anómalas. - Verdadero  
+Un escáner como Nessus busca vulnerabilidades en una red pero no detecta ataques. - Verdadero  
+Un honeypot de interacción baja emula servicios limitados y es fácil de desplegar. - Verdadero  
+Un honeynet es un sistema trampa que constituye una red completa. - Verdadero  
+El protocolo SSH no puede ser usado para túneles de puertos TCP. - Falso  
+IPSec no puede ser usado para la creación de redes privadas virtuales (VPN). - Falso  
+El protocolo TLS es incompatible con la versión 3 de SSL. - Verdadero  
+Los ataques de análisis de tráfico son un tipo de ataque pasivo. - Verdadero  
+El protocolo ESP en IPSec soporta autenticación y cifrado simultáneamente. - Verdadero  
+El protocolo AH en IPSec soporta cifrado además de autenticación. - Falso  
+Los sistemas trampa registran la actividad de los intrusos para análisis posterior. - Verdadero  
+Un SDI solo detecta ataques previamente conocidos mediante patrones específicos. - Verdadero  
+Los servicios de seguridad incluyen autenticación, confidencialidad, y no repudio. - Verdadero  
+La recomendación X.800 define una metodología sistemática para la seguridad de redes. - Verdadero  
+Un honeynet puede ser desplegado fácilmente sin riesgo alguno. - Falso  
+El cifrado en TOR asegura que cada nodo solo accede a lo necesario para enrutar los mensajes. - Verdadero  
+Un ataque de repetición es un tipo de ataque activo. - Verdadero  
+Los sistemas SDI/SPI pueden detectar ataques desconocidos mediante detección de anomalías. - Verdadero  
+El protocolo IPSec opera exclusivamente en modo transporte. - Falso  
+TLS puede reutilizar conexiones previamente establecidas, a diferencia de SSL. - Verdadero  
+SSH es un protocolo diseñado originalmente como un producto comercial. - Verdadero  
+PGP utiliza el cifrado de clave pública para garantizar la confidencialidad. - Verdadero  
+Un sistema trampa de alta interacción imita sistemas completos y captura ataques complejos. - Verdadero  
+Los falsos negativos en un SDI son situaciones de compromiso de seguridad que pasan desapercibidas. - Verdadero  
+Los escáneres de vulnerabilidades deben ejecutarse regularmente en sistemas productivos. - Falso  
+TOR y Signal utilizan cifrado de extremo a extremo para garantizar la privacidad. - Verdadero  
+El protocolo SSL no soporta autenticación de origen y destino. - Falso  
+Los servicios SIEM centralizan y analizan información de diversas fuentes para detectar patrones complejos. - Verdadero  
+Los servicios de seguridad no implementan políticas de seguridad. - Falso  

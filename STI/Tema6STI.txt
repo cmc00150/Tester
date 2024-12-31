@@ -1,0 +1,20 @@
+Los datos personales gestionados por una empresa no son de su propiedad. - Verdadero  
+La LOPD fue promulgada en 1995 en respuesta al Reglamento General de Protección de Datos. - Falso  
+El RGPD introduce el principio de responsabilidad proactiva para anticiparse a los problemas. - Verdadero  
+La privacidad desde el diseño debe incorporarse como una capa adicional en sistemas ya existentes. - Falso  
+El aseguramiento de la privacidad incluye medidas como la seudonimización y el cifrado. - Verdadero  
+El Esquema Nacional de Seguridad establece estándares mínimos de seguridad para la administración pública. - Verdadero  
+El ciclo de funcionamiento del ENS incluye auditorías cada cinco años. - Falso  
+La gestión de seguridad basada en riesgos es uno de los principios básicos del ENS. - Verdadero  
+El RGPD es aplicable únicamente a empresas europeas. - Falso  
+La privacidad como configuración predeterminada garantiza la protección de los datos sin acción del usuario. - Verdadero  
+El pensamiento "todos ganan" busca romper la dicotomía entre privacidad y funcionalidad. - Verdadero  
+El ENS clasifica la seguridad en cinco dimensiones, incluyendo la trazabilidad. - Verdadero  
+Los principios del ENS no incluyen medidas específicas de protección contra exfiltraciones de datos. - Falso  
+Las estrategias de diseño de la privacidad incluyen minimizar y ocultar los datos personales. - Verdadero  
+El ENS exige que los sistemas cuenten con autentificación multifactor. - Verdadero  
+La visibilidad y transparencia no son elementos necesarios para la privacidad desde el diseño. - Falso  
+El RGPD fue diseñado para unificar regulaciones de protección de datos dentro de la Unión Europea. - Verdadero  
+La seudonimización es una estrategia utilizada para reducir riesgos relacionados con los datos personales. - Verdadero  
+El RGPD reemplazó el reglamento de la LOPD a partir de 2018. - Verdadero  
+Los proveedores de servicios no están obligados a cumplir con el ENS si colaboran con la administración pública. - Falso  

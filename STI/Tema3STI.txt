@@ -1,0 +1,87 @@
+La criptografía simétrica utiliza la misma clave para cifrar y descifrar. - Verdadero  
+El principio de Kerckhoffs afirma que el secreto de un sistema radica en su algoritmo. - Falso  
+SHA-3 fue diseñado para reemplazar a SHA-2 debido a sus vulnerabilidades conocidas. - Falso  
+El modo ECB (Electronic Code Book) permite detectar patrones en datos cifrados. - Verdadero  
+El algoritmo RSA puede romperse fácilmente mediante ataques de fuerza bruta. - Falso  
+El cifrado de César es un ejemplo de cifrado monoalfabético. - Verdadero  
+SHA-1 genera resúmenes de 160 bits. - Verdadero  
+La máquina Enigma fue utilizada únicamente para cifrar mensajes militares alemanes. - Falso  
+El modo CBC utiliza un vector de inicialización para encadenar bloques cifrados. - Verdadero  
+El algoritmo DES ofrece una seguridad comparable al AES. - Falso  
+La criptografía asimétrica resuelve el problema de distribución de claves. - Verdadero  
+Un hash generado por MD5 tiene 512 bits de longitud. - Falso  
+El modo CTR (Counter Mode) permite la paralelización del cifrado. - Verdadero  
+La criptografía clásica incluye técnicas que aún son seguras hoy en día. - Falso  
+Las funciones hash como SHA-2 garantizan la integridad de los datos. - Verdadero  
+El algoritmo RC4 es un cifrado por bloques. - Falso  
+El cifrado de flujo genera una secuencia a partir de una semilla. - Verdadero  
+Un ataque de fuerza bruta prueba todas las combinaciones posibles de claves. - Verdadero  
+El cifrado híbrido utiliza algoritmos simétricos y asimétricos. - Verdadero  
+SHA-1 sigue siendo seguro para aplicaciones críticas. - Falso  
+La máquina Lorenz fue rota gracias al ordenador Colossus. - Verdadero  
+El algoritmo AES utiliza una clave fija de 128 bits. - Falso  
+El algoritmo ChaCha20 es más seguro que RC4 al incluir un nonce explícito. - Verdadero  
+Las S-Cajas se utilizan en cifrados por bloques para realizar sustituciones. - Verdadero  
+El algoritmo DES se basa en una estructura de red de sustitución y permutación. - Falso  
+El cifrado de flujo es ideal para comunicaciones en tiempo real. - Verdadero  
+Un certificado digital garantiza la autenticidad de una clave pública. - Verdadero  
+El algoritmo Diffie-Hellman cifra directamente los datos. - Falso  
+El cifrado de César es fácil de romper con análisis estadístico. - Verdadero  
+Las funciones MAC no requieren claves secretas. - Falso  
+SHA-3 utiliza una estructura de esponja para procesar datos. - Verdadero  
+La criptografía asimétrica utiliza pares de claves para cifrar y descifrar. - Verdadero  
+El modo ECB encadena los bloques cifrados para aumentar la seguridad. - Falso  
+El algoritmo AES fue diseñado para resistir ataques de análisis diferencial y lineal. - Verdadero  
+Las curvas elípticas son una mejora respecto a RSA por sus claves más cortas. - Verdadero  
+El algoritmo MD5 es una opción recomendada para verificar integridad de datos. - Falso  
+El ataque de cumpleaños es relevante para funciones hash. - Verdadero  
+Un cifrado simétrico usa una clave pública y una privada. - Falso  
+El cifrado de flujo puede generar secuencias pseudoaleatorias reutilizables. - Falso  
+El algoritmo de Diffie-Hellman permite a dos partes acordar una clave secreta. - Verdadero  
+La máquina Enigma nunca fue descifrada durante la Segunda Guerra Mundial. - Falso  
+Un ataque de fuerza bruta en RSA intenta factorizar números primos grandes. - Verdadero  
+SHA-256 pertenece a la familia SHA-3. - Falso  
+El uso de padding es opcional en cifrados por bloques. - Falso  
+Las funciones hash generan resúmenes de longitud fija. - Verdadero  
+El modo CBC permite detectar patrones repetitivos en mensajes cifrados. - Falso  
+El algoritmo AES soporta claves de 128, 192 y 256 bits. - Verdadero  
+El cifrado híbrido utiliza clave pública para cifrar y clave simétrica para descifrar. - Falso  
+Un certificado digital es emitido por una autoridad de confianza. - Verdadero  
+El algoritmo RC4 utiliza S-Cajas de 8x8 estáticas. - Falso  
+El cifrado de Lorenz permitía codificar mensajes teletipo. - Verdadero  
+SHA-1 es más seguro que MD5 frente a ataques de colisión. - Verdadero  
+El algoritmo DES utiliza una longitud de clave de 56 bits efectiva. - Verdadero  
+El ataque de intermediario es un problema común en criptografía simétrica. - Falso  
+El cifrado simétrico es más rápido que el cifrado asimétrico. - Verdadero  
+El modo ECB es ideal para cifrar datos sensibles. - Falso  
+Las funciones MAC verifican tanto la integridad como el origen de los datos. - Verdadero  
+SHA-3 fue diseñado por el mismo equipo que creó SHA-2. - Falso  
+Un cifrado de flujo genera bloques independientes como el modo ECB. - Falso  
+La máquina Enigma usaba rotores para realizar el cifrado. - Verdadero  
+El algoritmo RSA no es seguro si uno de los primos generados es incorrecto. - Verdadero  
+SHA-2 incluye versiones como SHA-224 y SHA-512. - Verdadero  
+El cifrado monoalfabético utiliza múltiples alfabetos para la sustitución. - Falso  
+Un ataque de cumpleaños busca pares de mensajes con el mismo hash. - Verdadero  
+El modo OFB permite cifrar datos en tiempo real. - Verdadero  
+El cifrado híbrido es menos eficiente que el cifrado asimétrico puro. - Falso  
+Las curvas elípticas están diseñadas para resolver el problema del logaritmo discreto. - Verdadero  
+El modo CTR no permite la paralelización del cifrado. - Falso  
+El algoritmo MD5 genera hashes de 128 bits. - Verdadero  
+SHA-1 fue desarrollado como parte del DSS por la NSA. - Verdadero  
+Un certificado digital no garantiza la identidad del propietario de la clave. - Falso  
+El cifrado simétrico requiere una clave diferente para cada par de usuarios. - Verdadero  
+El algoritmo ChaCha20 genera bloques de forma independiente. - Verdadero  
+El modo CBC es menos seguro que el modo ECB. - Falso  
+El ataque de fuerza bruta puede romper cualquier sistema dado tiempo suficiente. - Verdadero  
+El algoritmo Rijndael es la base del estándar AES. - Verdadero  
+SHA-2 tiene vulnerabilidades conocidas que lo hacen inseguro. - Falso  
+El algoritmo de Diffie-Hellman resuelve el problema de autenticación. - Falso  
+El algoritmo DES es vulnerable a ataques de fuerza bruta con hardware moderno. - Verdadero  
+El modo CTR requiere un vector de inicialización para operar. - Falso  
+La criptografía clásica incluye técnicas como el cifrado de César y Vigenère. - Verdadero  
+SHA-1 genera hashes más seguros que SHA-256. - Falso  
+El algoritmo RSA utiliza claves simétricas para cifrar grandes volúmenes de datos. - Falso  
+La máquina Lorenz fue más compleja que la máquina Enigma. - Verdadero  
+El algoritmo ChaCha20 incluye un nonce y un contador para mayor seguridad. - Verdadero  
+Las funciones hash no garantizan la confidencialidad de los datos. - Verdadero  
+La criptografía asimétrica utiliza claves más largas que la criptografía simétrica. - Verdadero  
