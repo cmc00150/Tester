@@ -31,7 +31,7 @@ Las contraseñas almacenadas con funciones hash son inmunes a ataques de fuerza 
 Los gestores de contraseñas facilitan la generación de contraseñas seguras. - Verdadero  
 La autenticación por biometría no requiere dispositivos especializados. - Falso  
 Los virus son programas maliciosos que necesitan ser instalados explícitamente. - Falso  
-Los gusanos informáticos no necesitan archivos para propagarse. - Verdadero  
+Los gusanos informáticos no tienen código especifico para hacer daño. - Verdadero  
 El cifrado del sistema de archivos protege contra accesos físicos no autorizados. - Verdadero  
 La programación segura elimina todas las vulnerabilidades de un sistema. - Falso  
 Los desbordamientos de buffer pueden comprometer todo el sistema si se ejecutan con privilegios de root. - Verdadero  

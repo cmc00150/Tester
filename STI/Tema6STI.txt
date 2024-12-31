@@ -1,20 +1,20 @@
-Los datos personales gestionados por una empresa no son de su propiedad. - Verdadero  
-La LOPD fue promulgada en 1995 en respuesta al Reglamento General de Protección de Datos. - Falso  
-El RGPD introduce el principio de responsabilidad proactiva para anticiparse a los problemas. - Verdadero  
-La privacidad desde el diseño debe incorporarse como una capa adicional en sistemas ya existentes. - Falso  
-El aseguramiento de la privacidad incluye medidas como la seudonimización y el cifrado. - Verdadero  
-El Esquema Nacional de Seguridad establece estándares mínimos de seguridad para la administración pública. - Verdadero  
-El ciclo de funcionamiento del ENS incluye auditorías cada cinco años. - Falso  
-La gestión de seguridad basada en riesgos es uno de los principios básicos del ENS. - Verdadero  
-El RGPD es aplicable únicamente a empresas europeas. - Falso  
-La privacidad como configuración predeterminada garantiza la protección de los datos sin acción del usuario. - Verdadero  
-El pensamiento "todos ganan" busca romper la dicotomía entre privacidad y funcionalidad. - Verdadero  
-El ENS clasifica la seguridad en cinco dimensiones, incluyendo la trazabilidad. - Verdadero  
-Los principios del ENS no incluyen medidas específicas de protección contra exfiltraciones de datos. - Falso  
-Las estrategias de diseño de la privacidad incluyen minimizar y ocultar los datos personales. - Verdadero  
-El ENS exige que los sistemas cuenten con autentificación multifactor. - Verdadero  
-La visibilidad y transparencia no son elementos necesarios para la privacidad desde el diseño. - Falso  
-El RGPD fue diseñado para unificar regulaciones de protección de datos dentro de la Unión Europea. - Verdadero  
-La seudonimización es una estrategia utilizada para reducir riesgos relacionados con los datos personales. - Verdadero  
-El RGPD reemplazó el reglamento de la LOPD a partir de 2018. - Verdadero  
-Los proveedores de servicios no están obligados a cumplir con el ENS si colaboran con la administración pública. - Falso  
+Los datos personales gestionados por una empresa pueden ser considerados como su propiedad. - Falso  
+La LOPD fue promulgada en 1999 en respuesta a la Directiva de Protección de Datos de la UE de 1995. - Verdadero  
+El RGPD no incluye el principio de responsabilidad proactiva como requisito. - Falso  
+La privacidad desde el diseño debe integrarse como parte esencial desde el inicio del desarrollo de sistemas. - Verdadero  
+El aseguramiento de la privacidad no incluye medidas como la seudonimización o el cifrado. - Falso  
+El Esquema Nacional de Seguridad establece estándares mínimos de seguridad para la administración pública y sus colaboradores. - Verdadero  
+El ciclo de funcionamiento del ENS incluye auditorías obligatorias cada dos años. - Verdadero  
+La gestión de seguridad basada en riesgos no forma parte de los principios básicos del ENS. - Falso  
+El RGPD es aplicable a cualquier empresa que maneje datos personales de ciudadanos de la UE, independientemente de su ubicación. - Verdadero  
+La privacidad como configuración predeterminada no garantiza la protección de los datos sin intervención del usuario. - Falso  
+El pensamiento "todos ganan" busca armonizar la privacidad con la funcionalidad y la usabilidad. - Verdadero  
+El ENS clasifica la seguridad en tres dimensiones principales: confidencialidad, integridad y disponibilidad. - Falso  
+Los principios del ENS incluyen medidas específicas para prevenir la exfiltración de datos. - Verdadero  
+Las estrategias de diseño de la privacidad no incluyen técnicas como minimizar y ocultar los datos personales. - Falso  
+El ENS recomienda que los sistemas implementen autentificación multifactor para aumentar su seguridad. - Verdadero  
+La visibilidad y transparencia son elementos fundamentales para garantizar la privacidad desde el diseño. - Verdadero  
+El RGPD no fue diseñado para unificar las regulaciones de protección de datos dentro de la Unión Europea. - Falso  
+La seudonimización es una técnica clave para mitigar riesgos asociados con los datos personales. - Verdadero  
+El RGPD reemplazó el reglamento de la LOPD en 2018, unificando la normativa en la UE. - Verdadero  
+Los proveedores de servicios que colaboran con la administración pública están obligados a cumplir con el ENS. - Verdadero  
