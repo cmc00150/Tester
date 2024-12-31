@@ -1,0 +1,48 @@
+El sistema operativo permite la comunicación entre el usuario y el hardware. - Verdadero  
+Cuanto más complejo sea un sistema operativo, menos riesgos de seguridad presentará. - Falso  
+Los sistemas operativos modernos permiten la interacción con múltiples usuarios. - Verdadero  
+Un usuario root en Linux tiene acceso ilimitado al núcleo sin restricciones. - Falso  
+Los permisos básicos de un archivo en UNIX incluyen lectura, escritura y ejecución. - Verdadero  
+El borrado seguro elimina todos los rastros de un archivo del dispositivo. - Falso  
+Un archivo con una firma digital garantiza su autenticidad. - Verdadero  
+Las bitácoras (journaling) permiten revertir cambios en caso de fallos. - Verdadero  
+El sistema de archivos ZFS no soporta la creación de instantáneas. - Falso  
+Las copias de seguridad deben realizarse con regularidad y almacenarse en ubicaciones separadas. - Verdadero  
+Los archivos de registro son útiles solo para monitorización en tiempo real. - Falso  
+Los controles de acceso permiten identificar y autenticar a los usuarios del sistema. - Verdadero  
+La autenticación basada en contraseñas es el método más seguro. - Falso  
+La autenticación multifactor combina al menos dos métodos diferentes. - Verdadero  
+Los ataques de diccionario no afectan a contraseñas con sal. - Falso  
+El NIST recomienda imponer reglas estrictas sobre la composición de contraseñas. - Falso  
+Las smartcards incorporan un microprocesador para aumentar la seguridad. - Verdadero  
+Los dispositivos biométricos son inmunes a ataques de suplantación. - Falso  
+Los errores en el código de los programas pueden comprometer la información. - Verdadero  
+El desbordamiento de buffer permite ejecutar código arbitrario en algunos casos. - Verdadero  
+Las condiciones de carrera surgen por el acceso simultáneo a recursos compartidos. - Verdadero  
+La inyección SQL ocurre cuando las entradas de usuario no son verificadas adecuadamente. - Verdadero  
+Un ransomware puede secuestrar la información de un sistema y exigir un rescate. - Verdadero  
+Un rootkit es fácil de detectar con antivirus estándar. - Falso  
+Las amenazas persistentes avanzadas (APT) pueden permanecer activas por años. - Verdadero  
+Un sistema de archivos cifrado garantiza la confidencialidad de los datos almacenados. - Verdadero  
+Las herramientas como Memtest86+ ayudan a detectar problemas en el hardware. - Verdadero  
+Las copias de seguridad incrementales almacenan todos los datos del sistema en cada operación. - Falso  
+Los registros de eventos pueden procesarse automáticamente con herramientas como Fail2Ban. - Verdadero  
+Las contraseñas almacenadas con funciones hash son inmunes a ataques de fuerza bruta. - Falso  
+Los gestores de contraseñas facilitan la generación de contraseñas seguras. - Verdadero  
+La autenticación por biometría no requiere dispositivos especializados. - Falso  
+Los virus son programas maliciosos que necesitan ser instalados explícitamente. - Falso  
+Los gusanos informáticos no necesitan archivos para propagarse. - Verdadero  
+El cifrado del sistema de archivos protege contra accesos físicos no autorizados. - Verdadero  
+La programación segura elimina todas las vulnerabilidades de un sistema. - Falso  
+Los desbordamientos de buffer pueden comprometer todo el sistema si se ejecutan con privilegios de root. - Verdadero  
+El manejo inadecuado de entradas puede permitir comandos no autorizados. - Verdadero  
+Las condiciones de carrera son fáciles de detectar en aplicaciones con múltiples procesos. - Falso  
+Un rootkit puede ocultar procesos y archivos al sistema operativo. - Verdadero  
+Los sistemas como ZFS y Btrfs permiten recuperar versiones antiguas de archivos. - Verdadero  
+La herramienta Data Shredder realiza borrados seguros de archivos. - Verdadero  
+Los permisos inadecuados en archivos temporales pueden causar vulnerabilidades. - Verdadero  
+Los programas espía como keyloggers roban información sin el conocimiento del usuario. - Verdadero  
+El modo de operación lockdown en Linux restringe interacciones incluso para el usuario root. - Verdadero  
+Un archivo ejecutable modificado con código malicioso puede contener troyanos o virus. - Verdadero  
+Los discos duros redundantes (RAID) reducen el riesgo de pérdida de datos por fallos en el hardware. - Verdadero  
+Las contraseñas deben tener al menos 8 caracteres según el NIST. - Verdadero  

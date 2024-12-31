@@ -1,0 +1,20 @@
+Un sistema de información es seguro si garantiza la recuperación de datos tras un fallo en un tiempo razonable. - Verdadero  
+La usabilidad, la seguridad y la funcionalidad pueden mejorarse simultáneamente sin compromisos. - Falso  
+Las propiedades de un sistema seguro incluyen confidencialidad, integridad y disponibilidad. - Verdadero  
+Una amenaza se define como cualquier deficiencia en un sistema susceptible de producir un fallo. - Falso  
+Los exploits aprovechan vulnerabilidades para provocar daños en un sistema. - Verdadero  
+El CVE (Common Vulnerabilities and Exposures) asigna identificadores únicos a las vulnerabilidades. - Verdadero  
+Según el CVSS (Common Vulnerability Scoring System), un valor de 8.5 indica una vulnerabilidad de severidad crítica. - Falso  
+Las vulnerabilidades pueden surgir tanto por errores en el diseño como por un uso inadecuado del sistema. - Verdadero  
+La ventana de exposición se refiere al tiempo que pasa desde que una vulnerabilidad se detecta hasta que se soluciona. - Verdadero  
+La publicación inmediata de vulnerabilidades siempre es la mejor estrategia para reducir riesgos. - Falso  
+La seguridad se puede considerar un producto terminado si se aplican las mejores prácticas de diseño. - Falso  
+La seguridad es más un proceso que un estado final, implicando una gestión constante. - Verdadero  
+La falta de formación en seguridad en los equipos de diseño y desarrollo es una causa común de vulnerabilidades. - Verdadero  
+Las políticas de copia de seguridad son esenciales para minimizar el impacto de fallos en los sistemas. - Verdadero  
+Las pruebas beta son suficientes para detectar todas las vulnerabilidades en un sistema. - Falso  
+Un sistema con un número bajo de vulnerabilidades puede considerarse completamente seguro. - Falso  
+La competencia en el mercado fomenta la implementación de medidas de seguridad exhaustivas en el desarrollo de software. - Falso  
+Los sistemas trampa (honeypots) son útiles únicamente durante la fase de diseño de un sistema. - Falso  
+La granularidad del CVSS 4.0 permite medir de manera más precisa las vulnerabilidades en entornos de control industrial. - Verdadero  
+La detección de eventos sospechosos es una estrategia reactiva y no debe considerarse como parte de una política de seguridad proactiva. - Falso  

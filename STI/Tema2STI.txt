@@ -1,0 +1,20 @@
+Es necesario definir y documentar las condiciones de seguridad en el funcionamiento de cualquier sistema. - Verdadero  
+Ignorar los riesgos es una estrategia válida si el presupuesto es limitado. - Falso  
+Las políticas de seguridad pueden definirse como expectativas documentadas sobre la gestión de la seguridad. - Verdadero  
+Las políticas de seguridad solo son útiles para definir el funcionamiento de los sistemas técnicos, no para procesos organizacionales. - Falso  
+Las políticas maestras también se conocen como políticas de programa y establecen la dirección estratégica de seguridad. - Verdadero  
+Un ejemplo de política específica sería una política que regula el acceso remoto a través de VPN. - Verdadero  
+Las políticas del sistema son más útiles para empleados administrativos que para técnicos. - Falso  
+El propósito y los objetivos claros son elementos clave de las políticas de seguridad. - Verdadero  
+Las políticas de seguridad no necesitan actualizarse regularmente si están bien diseñadas desde el inicio. - Falso  
+Los estándares de seguridad responden a la pregunta de "cómo" implementar la gestión de seguridad. - Verdadero  
+La norma ISO 27001 tiene sus orígenes en estándares del British Standards Institution. - Verdadero  
+La ISO 27001 reemplazó la norma UNE 71502:2004 en España en 2009. - Verdadero  
+El estándar NIST serie 800 es desarrollado por el National Institute of Standards and Technology de EE.UU. - Verdadero  
+CobiT está diseñado exclusivamente para organizaciones financieras. - Falso  
+El estándar COSO-SOX está orientado a la gestión de riesgos en el ámbito financiero. - Verdadero  
+Las políticas de seguridad no deberían incluir definiciones claras de términos importantes para evitar ambigüedades. - Falso  
+La ISO 27000 incluye actualmente más de 30 documentos sobre gestión de la seguridad. - Verdadero  
+Una ventaja de las políticas de seguridad es que ayudan a cumplir requerimientos legales y regulatorios. - Verdadero  
+Los estándares de seguridad permiten obtener certificaciones empresariales basadas en buenas prácticas. - Verdadero  
+El IT Governance Institute es el creador de la norma ISO 27002. - Falso  

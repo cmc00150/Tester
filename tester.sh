@@ -51,8 +51,8 @@ function mostrarBarraPorcentaje()
 	printf -v barra "%$((${ancho}-2))s" # Creamos tantos espacios como ancho sea el terminal (menos 2 para poner los [])
 	local barra=${barra// /#} # Sustituimos esos espacios por #
 
-	local porcentaje=$(( (${#barra} / ${total} ) * $posicion )) # Calculamos el número de # para representar el porcentaje
-	printf -v tramo "[%-${#barra}.$((${porcentaje}+1))s]" $barra # Alineamos a la izquierda y ponemos el resto a espacios
+	local porcentaje=$(( (${posicion} * ${#barra}) / ${total} )) # Calculamos el número de # para representar el porcentaje
+	printf -v tramo "[%-${#barra}.${porcentaje}s]" $barra # Alineamos a la izquierda y ponemos el resto a espacios
 	
 	if [ $porcentaje -le $(($ancho/3)) ]; then
  	  	echo -n $pocoRecorrido$colorLetra
@@ -103,13 +103,23 @@ function cooldown()
 function puntuacion()
 {	
 	echo -e "${BLANCO}"
-	echo "------ Puntuación ------"
-	awk -v a="$aciertos" -v b="$total" 'BEGIN {printf "Aciertos: %d - %.2f\n", a,  (a/b)*100}' # Aciertos (utilizamos awk porque tiene más precisión en la división)
-	awk -v a="$aciertos" -v b="$total" 'BEGIN {printf "Fallos: %d - %.2f\n", b-a,  ((b-a)/b)*100}' # Fallos
-	awk -v p="$penalizacion" -v a="$aciertos" -v b="$total" 'BEGIN {printf "Aciertos si los fallos restan: %.1f - %.2f\n", a-((b-a)/p), ((a-((b-a)/p))/b)*100}' # Mostramos la punt. teniendo en cuenta la penalización
+	local horas=$((  (($2-$1)/3600) % 60 ))
+	local minutos=$(( (($2-$1)/60) % 60 ))
+	local segundos=$(( ($2-$1) % 60 ))
+
+	strAciertos=$(awk -v a="$aciertos" -v b="$total" 'BEGIN {printf "Aciertos: %d - %.2f", a,  (a/b)*100}') # Aciertos (utilizamos awk porque tiene más precisión en la división)
+	strFallos=$(awk -v a="$aciertos" -v b="$total" 'BEGIN {printf "Fallos: %d - %.2f", b-a,  ((b-a)/b)*100}') # Fallos
+	strPenalizacion=$(awk -v p="$penalizacion" -v a="$aciertos" -v b="$total" 'BEGIN {printf "Aciertos si los fallos restan: %.1f - %.2f", a-((b-a)/p), ((a-((b-a)/p))/b)*100}') # Mostramos la punt. teniendo en cuenta la penalización
+	
+	echo "╭─────────────────── Puntuación ───────────────────╮"
+	printf "├──────────────────── %02d:%02d:%02d ────────────────────┤\n" $horas $minutos $segundos
+	printf "├─ %-47s │\n" "$strAciertos"
+	printf "├─ %-47s │\n" "$strFallos"
+	printf "├─ %-47s │\n" "$strPenalizacion"
+	echo -e "╰──────────────────────────────────────────────────╯\n"
 }
 
-if [[ ! -r ${!#} || ${1} =~ [0-9] || $# -eq 0 ]]; then # Si el primer argumento es un número o el ultimo no es un fichero da error
+if [[ ! -r ${!#} || ${1} =~ ^[0-9]$ || $# -eq 0 ]]; then # Si el primer argumento es un número o el ultimo no es un fichero da error
 	help
 	exit
 fi
@@ -136,11 +146,10 @@ for((arg=1; arg<$#; arg++)); do # Miramos las opciones que deben de estar antes 
 	case ${!arg} in
 
 		--random)
-			if [[ ${!siguiente} =~ [0-9] ]]; then help; exit; fi # Random no acepta argumentos
 			ordenPreguntas=($( orden $total ))
 		;;
 		--time)
-			if [[ ${!siguiente} =~ [^0-9] || ${!siguiente} < 0 ]]; then help; exit; fi # Debe pasarse un número y que sea mayor que 0
+			if [[ ${!siguiente} =~ [^0-9] && ${!siguiente} < 0 ]]; then help; exit; fi # Debe pasarse un número y que sea mayor que 0
 			delay=${!siguiente}
 		;;
 		--penalty)
@@ -156,6 +165,8 @@ for((arg=1; arg<$#; arg++)); do # Miramos las opciones que deben de estar antes 
 	esac
 done
 
+tInicio=$(date +%s)
+
 for indice in ${ordenPreguntas[@]}
 do
 	((posicion++)) # Aumentamos la posición donde nos encontramos
@@ -169,4 +180,6 @@ do
 	tput clear # Limpiamos la pantalla
 done
 
-puntuacion
+tFin=$(date +%s)
+
+puntuacion tInicio tFin
