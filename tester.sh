@@ -149,11 +149,15 @@ for((arg=1; arg<$#; arg++)); do # Miramos las opciones que deben de estar antes 
 			ordenPreguntas=($( orden $total ))
 		;;
 		--time)
+<<<<<<< HEAD
 			if [[ ${!siguiente} =~ [^0-9] && ${!siguiente} < 0 ]]; then help; exit; fi # Debe pasarse un número y que sea mayor que 0
+=======
+			if [[ ${!siguiente} =~ [^0-9] || ${!siguiente} < 0 ]]; then help; exit; fi # Debe pasarse un número y que sea mayor que 0 (da error cuando tenga un caracter no numérico o sea menor que 0)
+>>>>>>> refs/remotes/origin/main
 			delay=${!siguiente}
 		;;
 		--penalty)
-			if [[ ${!siguiente} =~ [^0-9] || ${!siguiente} < 1 ]]; then help; exit; fi # Debe pasarse un número y que sea mayor que 1
+			if [[ ${!siguiente} =~ [^0-9] || ${!siguiente} < 1 ]]; then help; exit; fi # Debe pasarse un número y que sea mayor que 1 (da error cuando tenga un caracter no numérico o sea menor que 1)
 			penalizacion=${!siguiente}
 		;;
 		[0-9]) # Si es un número no hacemos nada
