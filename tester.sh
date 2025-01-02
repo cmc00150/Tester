@@ -19,6 +19,9 @@ function help(){
 			
 			--penalty
 					Establece cada cuantos fallos restan una buena (default: 1), debe ser mayor que 1.
+			
+			--history
+					Evita que se limpie la pantalla después de cada pregunta [true|false] (default: true).
 EOF
 }
 
@@ -124,6 +127,7 @@ if [[ ! -r ${!#} || ${1} =~ ^[0-9]$ || $# -eq 0 ]]; then # Si el primer argument
 	exit
 fi
 
+salto=true
 aciertos=0
 posicion=0
 total=$(wc -l < "${!#}")
@@ -156,13 +160,19 @@ for((arg=1; arg<$#; arg++)); do # Miramos las opciones que deben de estar antes 
 			if [[ ${!siguiente} =~ [^0-9] || ${!siguiente} < 1 ]]; then help; exit; fi # Debe pasarse un número y que sea mayor que 1 (da error cuando tenga un caracter no numérico o sea menor que 1)
 			penalizacion=${!siguiente}
 		;;
-		[0-9]) # Si es un número no hacemos nada
+		--salto)
+			if [[ ${!siguiente} =~ (true)|(false) ]]; then
+				salto=${!siguiente}
+			else
+				help; exit
+			fi
 		;;
 		*)
 			help
 			exit
 		;;
 	esac
+	((arg++))
 done
 
 tInicio=$(date +%s)
@@ -175,9 +185,10 @@ do
 	
 	mostrarPregunta "${preguntas[$indice]}" # Le pasamos la pregunta
 	
-	cooldown
-	
-	tput clear # Limpiamos la pantalla
+	if [[ $salto == "true" ]]; then 
+		cooldown
+		tput clear; 
+	fi # Limpiamos la pantalla
 done
 
 tFin=$(date +%s)
