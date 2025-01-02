@@ -21,4 +21,5 @@ OPTIONS:
   --random      Muestra las preguntas de forma aleatoria (default: ordenado)
   --penalty     Establece cuantos fallos restan un acierto (default: 1)
   --time        Configura el tiempo entre pregunta y pregunta (default: 1)
+  --history     Evita que se limpie la pantalla después de cada pregunta [true|false] (default: false).
 ```
