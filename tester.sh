@@ -187,8 +187,8 @@ do
 	
 	if [[ $historial == "false" ]]; then 
 		cooldown
-		tput clear; 
-	fi # Limpiamos la pantalla
+		tput clear # Limpiamos la pantalla
+	fi
 done
 
 tFin=$(date +%s)
