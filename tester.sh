@@ -151,6 +151,7 @@ for((arg=1; arg<$#; arg++)); do # Miramos las opciones que deben de estar antes 
 
 		--random)
 			ordenPreguntas=($( orden $total ))
+			((arg--))
 		;;
 		--time)
 			if [[ ${!siguiente} =~ [^0-9] || ${!siguiente} < 0 ]]; then help; exit; fi # Debe pasarse un número y que sea mayor que 0 (da error cuando tenga un caracter no numérico o sea menor que 0)
