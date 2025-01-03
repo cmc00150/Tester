@@ -7,7 +7,7 @@ Un sistema de detección de intrusiones procesa automáticamente los datos de au
 La ventana de exposición se cierra cuando todos los usuarios de un programa han instalado el parche correspondiente. - Verdadero
 El algoritmo RSA se basa en el problema de Diffie—Hellmann. - Falso
 Todo criptosistema cumple la condición Dk(Ek(c))=m. - Falso
-Una comunicación a través de SSL consta de dos fases: autentificación (authentication) y negociación. - Verdadero
+Una comunicación a través de SSL consta de dos fases: autentificación (authentication) y negociación. - Falso
 Muchas APT permanecen sobre todo en memoria no volátil. - Falso
 La reducción de auditoría consiste en eliminar información redundante o irrelevante de los registros de auditoría. - Verdadero
 Diceware es un método para crear contraseñas muy seguras, mediante el empleo de dados. - Verdadero
