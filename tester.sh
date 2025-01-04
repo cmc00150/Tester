@@ -22,6 +22,9 @@ function help(){
 			
 			--history
 					Evita que se limpie la pantalla después de cada pregunta [true|false] (default: false).
+			
+			--examView
+					Muestra las preguntas más parecidas a un examen [true|falso] (default: false).
 EOF
 }
 
@@ -127,9 +130,9 @@ if [[ ! -r ${!#} || ${1} =~ ^[0-9]$ || $# -eq 0 ]]; then # Si el primer argument
 	exit
 fi
 
+tipoExamen=false
 historial=false
 aciertos=0
-posicion=0
 total=$(wc -l < "${!#}")
 
 penalizacion=1
@@ -168,6 +171,13 @@ for((arg=1; arg<$#; arg++)); do # Miramos las opciones que deben de estar antes 
 				help; exit
 			fi
 		;;
+		--examView)
+			if [[ ${!siguiente} =~ (true)|(false) ]]; then
+				tipoExamen=${!siguiente}
+			else
+				help; exit
+			fi
+		;;
 		*)
 			help
 			exit
@@ -178,20 +188,50 @@ done
 
 tInicio=$(date +%s)
 
-for indice in ${ordenPreguntas[@]}
-do
-	((posicion++)) # Aumentamos la posición donde nos encontramos
-  
-	mostrarBarraPorcentaje
-	
-	mostrarPregunta "${preguntas[$indice]}" # Le pasamos la pregunta
-	
-	if [[ $historial == "false" ]]; then 
-		cooldown
-		tput clear # Limpiamos la pantalla
-	fi
-done
+tput smcup
+tput cup 0 0
+
+case $tipoExamen in
+	true)
+		preguntasExamen=()
+
+		for indice in ${ordenPreguntas[@]}; do
+			preguntasExamen+=($indice "${preguntas[$indice]% - *}" off)
+		done
+		
+		respuestasEx=$(dialog --title "Test ${!#}" \
+							  --stdout \
+						      --checklist "Moverse entre preguntas con las FLECHAS\nSeleccionar una opcion con ESPACIO\nPara terminar selecciona OK con ENTER" 0 0 $total "${preguntasExamen[@]}")
+
+		tput clear
+
+		if [[ $respuestasEx == "" ]]; then tput clear; exit; fi
+
+		for indiceRespuesta in ${respuestasEx[@]}; do
+			printf -v respEx "%.1s" ${preguntas[$indiceRespuesta]#* - }
+			if [[ ${respEx^} == "V" ]]; then ((aciertos++)); fi
+		done
+	;;
+	false)
+		posicion=0
+		for indice in ${ordenPreguntas[@]}
+		do
+			((posicion++)) # Aumentamos la posición donde nos encontramos
+		
+			mostrarBarraPorcentaje
+			
+			mostrarPregunta "${preguntas[$indice]}" # Le pasamos la pregunta
+			
+			if [[ $historial == "false" ]]; then 
+				cooldown
+				tput clear # Limpiamos la pantalla
+			fi
+		done
+	;;
+esac
 
 tFin=$(date +%s)
+
+tput rmcup
 
 puntuacion tInicio tFin
