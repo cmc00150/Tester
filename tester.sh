@@ -70,7 +70,10 @@ function mostrarBarraPorcentaje()
  	  	echo -n $altoRecorrido$colorLetra
  	fi
  	
-	printf "${tramo// /-}" # Sustituimos los espacios por los -
+	printf "${tramo// /.}" # Sustituimos los espacios por los -
+	porcentajeStr=$(awk -v a="$posicion" -v b="$total" 'BEGIN {printf " %.2f% \n", (a/b)*100}')
+	tput cup 0 $(( ($ancho / 2) - (${#porcentajeStr} / 2) ))
+	tput bold; echo "$porcentajeStr"
 	tput sgr0 # Limpiamos el estilo
 }
 
