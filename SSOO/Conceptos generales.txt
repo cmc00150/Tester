@@ -1,0 +1,51 @@
+2) La estructura de diseño operativo que consiste en crear un núcleo con una funcionalidad básica y que los servicios de alto nivel se ejecuten como componentes en el espacio del usuario se llama:
+a) Estructura en Niveles.
+b) Máquina Virtuales
+c) Monolíticos.
+D) Micronúcleo.
+expl - Una tendencia de los sistemas operativos modernos es la de trasladar el código a capas superiores, y eliminar la mayor parte posible del sistema operativo para mantener un núcleo mínimo o microkernel. El punto de vista usual es el de implantar la mayoría de las funciones del sistema operativo como procesos de usuario
+
+23, ¿Cuál de los siguientes enunciados NO DEFINE correctamente a un Sistema operativo?
+a) Contiene las rutinas de atención a las interrupciones.
+b) Se ejecuta en modo supervisor.
+c) Se carga en la memoria principal durante el arranque del sistema,
+D) Cuando hay sobrecarga puede estar en estado suspendido,
+expl - El resto son verdaderas mientras que la d es falsa, ya que el SO es el que gestiona gran parte del sistema y no puede pasar a suspendido como el resto de procesos.
+
+2) En un sistema operativo de multiprogramación:
+a) Se ejecuta más rápido un proceso.
+b) Se utilizan menos estructuras de datos que un sistema monoprogramado.
+C) Se ejecutan más procesos en el mismo periodo de tiempo que un sistema monoprogramado.
+d) Se utiliza sólo en las grandes máquinas y no en la computación doméstica
+expl - Mientras que si un proceso en un SO monoprogramado usa la E/S este tiempo de CPU se desperdicia, en un multiprogramado pueden ejecutarse otros procesos.
+
+21) Tenemos un sistema multiprogramado con una única CPU. ¿Cuál de las siguientes combinaciones NUNCA podría ser cierta?
+a) Podría ser un sistema concurrente y de tiempo real.
+B) Podría ser un sistema de tiempo compartido y además de procesamiento paralelo.
+c) Podría ser un sistema por lotes y además multiusuario.
+d) Podría ser un sistema de tiempo compartido y multiusuario.
+expl - 
+
+1) ¿Cuál de estos sistemas informáticos NO se puede dar?
+a) Sistema por lotes no multiprogramado.
+b) Sistema multiusuario de tiempo compartido.
+c) Sistema de tiempo compartido no multiprogramado.
+d) Sistema de tiempo real y tiempo compartido.
+
+16) El grado de multiprogramación es igual al
+a) El numero de entradas que tiene la tabla de procesos menos el número de procesos que están suspendidos
+b) El numero de procesos que están en el estado preparado
+c) El numero de entradas que tiene la tabla de procesos
+d) El numero de procesos que están preparados más el numero de procesos que están bloqueados
+
+11) En un momento determinado el grado de multiprogramación es 23, por tanto:
+a) En la memoria principal tenemos tantos BCPs como procesos preparados.
+b) El número de BCPs en memoria principal es el grado de multiprogramación menos el número de procesos suspendidos.
+e) En memoria principal hay 23 BCPS.
+d) Los BCPS de los procesos bloqueados, están suspendidos y en memoria secundaria
+
+15) ¿Qué se entiende por "sistema operativo multiprogramado"?
+a) Es aquel que nunca consume tiempo de CPU.
+b) El que reparte el tiempo de CPU cuando un proceso realiza una E/S.
+c) El que puede ser utilizado por varios usuarios a la vez
+d) El que utiliza swapping para ejecutar varios programas a la vez.
