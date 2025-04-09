@@ -1,0 +1,3 @@
+/home/cesar/Escritorio/testerC++/cmake-build-debug/CMakeFiles/testerC__.dir
+/home/cesar/Escritorio/testerC++/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/cesar/Escritorio/testerC++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
