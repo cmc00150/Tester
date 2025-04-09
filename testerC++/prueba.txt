@@ -1,3 +1,0 @@
-Puede llegar un caso en que varias vulnerabilidades tengan asociados un mismo CVE-ID. - Falso
-Para que una vulnerabilidad recién descubierta sea incorporada al listado CVE, debe seguir un proceso que consta de 3 etapas: Etapa de presentación inicial y tratamiento, etapa de candidatura y etapa de publicación. - Verdadero
-Las actualizaciones de un sistema son un mero capricho del desarrollador. No solucionan errores, ni vulnerabilidades de tipo 0day. - Falso
