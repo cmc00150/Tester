@@ -13,11 +13,13 @@ Tester::Tester(string arch, string flag) {
 	string fila;
 
 	if (flag == "-vf")
-		while ( getline(archivo, fila) )
+		while ( getline(archivo >> ws, fila) ) {
+			if (fila.empty()) continue;
 			recogerPreguntaVerdaderoFalso(fila);
+		}
 	else if (flag == "-ab")
-		while ( getline(archivo, fila) ) {
-			if (fila == "") continue;
+		while ( getline(archivo >> ws, fila) ) {
+			if (fila.empty()) continue;
 			recogerPreguntaAbcd(fila);
 		}
 	else {
