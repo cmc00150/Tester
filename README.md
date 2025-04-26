@@ -1,7 +1,7 @@
 # Tester
 El proyecto consta de dos partes:
 <div align="center" style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr auto; justify-items: center; gap: 30px;">
-  <img src="assets/logos/Escriba_logo.png" width="70%">
+  <img src="/Escriba_logo.png" width="70%">
   <img src="assets/logos/Tester_logo.png" width="70%" style="background: rgb(255, 255, 255, 0.1); border-radius: 20px">
   <section>
     <h2 style="margin-top: 10px;">Escriba.py</h2>
