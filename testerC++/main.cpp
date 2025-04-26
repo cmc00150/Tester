@@ -96,6 +96,8 @@ try {
             throw runtime_error("[Error] el argumento " + string(argv[i]) + " no existe");
     }
 
+    SetConsoleOutputCP(CP_UTF8); // Establecemos la salida de la consola para que interprete carácteres UTF-8
+
     if (flag.empty()) throw runtime_error("[Error] no se ha indicado cual es el tipo de las preguntas");
     if (ruta.empty()) throw runtime_error("[Error] no se ha indicado donde se ecuentra el archivo");
 

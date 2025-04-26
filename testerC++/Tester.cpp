@@ -12,19 +12,17 @@ Tester::Tester(string arch, string flag) {
 
 	string fila;
 
-	if (flag == "-vf")
-		while ( getline(archivo >> ws, fila) ) {
-			if (fila.empty()) continue;
+	while ( getline(archivo >> ws, fila) ) {
+		if (fila.empty()) continue;
+		
+		if (flag == "-vf")
 			recogerPreguntaVerdaderoFalso(fila);
-		}
-	else if (flag == "-ab")
-		while ( getline(archivo >> ws, fila) ) {
-			if (fila.empty()) continue;
+		else if (flag == "-ab")
 			recogerPreguntaAbcd(fila);
+		else {
+			cerr << "Error con el tipo de preguntas " << flag;
+			exit(EXIT_FAILURE);
 		}
-	else {
-		cerr << "Error con el tipo de preguntas " << flag;
-		exit(EXIT_FAILURE);
 	}
 
 	archivo.close();
@@ -128,9 +126,9 @@ void Tester::comprobarRespuesta(char respuesta) {
 	if (toupper(respuesta) == opcionCorrecta) {
 		aciertos++;
 
-		cout << VERDE << "Respuesta correcta " << FELIZ << endl << endl;
+        cout << VERDE << "Respuesta correcta :D" << endl << endl;
 	}else
-		cout << ROJO << "Respuesta incorrecta " << TRISTE << " , la solución era: " << opcionCorrecta << endl << endl;
+		cout << ROJO << "Respuesta incorrecta :C, la solución era: " << opcionCorrecta << endl << endl;
 
 	cout << RESETEARFORMATO;
 }
@@ -140,13 +138,18 @@ void Tester::comprobarRespuesta(char respuesta) {
  * @return Devuelve una cadena que representa una barra de progreso.
  */
 void Tester::barraProgreso() {
-	struct winsize w{};
-	ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
-	int tamTerminal = w.ws_col - 2; // Le restamos dos por los [] del inicio y del final.
+#if defined(_WIN32) || defined(_WIN64)
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    if (!GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi))
+        throw runtime_error("[Tester::barraProgreso] Error al obtener el tamaño de la terminal.");
 
-	if (tamTerminal < 0) {
-		throw runtime_error("[Tester::barraProgreso] Error al obtener el tamaño de la terminal (tam: " + to_string(tamTerminal) + ")");
-	}
+    int cols = csbi.srWindow.Right - csbi.srWindow.Left + 1;
+#else
+    struct winsize w;
+	ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
+	int cols = w.ws_col;
+#endif
+    int tamTerminal = cols - 2; // Le restamos dos por los [] del inicio y del final.
 
 	int porcentaje = ((float)pregMostradas/preguntas.size()) * 100;
 	string porcentajeStr = " " + to_string(porcentaje) + "% ";
@@ -210,22 +213,24 @@ void Tester::desordenar() {
  * @brief Muestra por pantalla un resumen enmarcado.
  */
 void Tester::resumen() {
-	const string cabezera =     "╭────────────── Puntuación ──────────────╮";
-	string tiempo =             "├───────────────          ───────────────┤";
-	string aciertosStr =        "├─ Aciertos:                             │";
-	string fallosStr =          "├─ Fallos:                               │";
-	string aciertosFallosStr =  "├─                                       │";
-	const string base =         "╰────────────────────────────────────────╯";
+    string lineas[] = {
+			"╭────────────── Puntuación ──────────────╮",
+            "├───────────────          ───────────────┤",
+            "├─ Aciertos:                             │",
+            "├─ Fallos:                               │",
+            "├─                                       │",
+            "╰────────────────────────────────────────╯",
+            "✘ restan 1✔ : "
+    };
 
-	string aux = format("{}✘ restan 1✔: ", (penalizacion == INT_MAX)? "NO" : to_string(penalizacion));
+    lineas[6] = format("{}{}", (penalizacion == INT_MAX)? "NO" : to_string(penalizacion), lineas[6]);
 
 	auto tiempoFin = std::chrono::high_resolution_clock::now();
 	float duracion = chrono::duration_cast<chrono::seconds>(tiempoFin - tiempoInicio).count();
 	stringstream cronometro;
-	cronometro <<
-			setw(2) << setfill('0') << (int)(duracion/3600) % 60 << ":" <<
-			setw(2) << setfill('0') << (int)(duracion/60) % 60 << ":" <<
-			setw(2) << setfill('0') << (int)duracion % 60;
+	cronometro <<   setw(2) << setfill('0') << (int)(duracion/3600) % 60 << ":" <<
+			        setw(2) << setfill('0') << (int)(duracion/60) % 60 << ":" <<
+			        setw(2) << setfill('0') << (int)duracion % 60;
 
 	stringstream aciertosFinal;
 	aciertosFinal << aciertos << " - "
@@ -236,18 +241,18 @@ void Tester::resumen() {
 		<< setprecision(4) << (((float)preguntas.size() - aciertos)/preguntas.size())*100;
 
 	stringstream aciertosFallosFinal;
-	aciertosFallosFinal << setprecision(2) << (aciertos - ((float)(preguntas.size() - aciertos)/penalizacion)) << " - "
-		<< setprecision(4) << ((aciertos - ((float)(preguntas.size() - aciertos)/penalizacion))/preguntas.size())*100;
+	aciertosFallosFinal << setprecision(2) << (aciertos - ((penalizacion != INT_MAX)? ((float)(preguntas.size() - aciertos)/penalizacion) : 0)) << " - "
+		<< setprecision(4) << ((aciertos - ((penalizacion != INT_MAX)? ((float)(preguntas.size() - aciertos)/penalizacion) : 0))  /preguntas.size())*100;
 
 	stringstream ventana;
-	ventana << cabezera << endl;
-	ventana << tiempo.replace(tiempo.find(' ')+1, cronometro.str().size(), cronometro.str()) << endl;
-	ventana << aciertosStr.replace(17, aciertosFinal.str().size(), aciertosFinal.str()) << endl;
-	ventana << fallosStr.replace(15, fallosFinal.str().size(), fallosFinal.str()) << endl;
-	ventana << aciertosFallosStr.replace(7, aux.size()+aciertosFallosFinal.str().size()-4, aux + aciertosFallosFinal.str()) << endl;
-	ventana << base << endl;
+	ventana << lineas[0] << endl;
+	ventana << lineas[1].replace(lineas[1].find(' ')+1, cronometro.str().size(), cronometro.str()) << endl;
+	ventana << lineas[2].replace(17, aciertosFinal.str().size(), aciertosFinal.str()) << endl;
+	ventana << lineas[3].replace(15, fallosFinal.str().size(), fallosFinal.str()) << endl;
+	ventana << lineas[4].replace(7, lineas[6].size()+aciertosFallosFinal.str().size()-4, lineas[6] + aciertosFallosFinal.str()) << endl;
+	ventana << lineas[5] << endl;
 
-	cout << LIMPIARPANTALLA << endl;
+    cout << LIMPIARPANTALLA << endl;
 	cout << ventana.str() << endl;
 }
 

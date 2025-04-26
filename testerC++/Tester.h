@@ -1,8 +1,18 @@
 #ifndef TESTER_H
 #define TESTER_H
+
+#if defined(_WIN32) || defined(_WIN64)
+    #include <windows.h>
+    #include <io.h>
+    #include <fcntl.h>
+#else
+    #include <sys/ioctl.h>
+    #include <unistd.h>
+    #include <cstdio>
+#endif
 #include <list>
 #include <iostream>
-#include <limits.h>
+#include <climits>
 #include "Pregunta.h"
 #include "Tester.h"
 #include <fstream>
@@ -14,12 +24,8 @@
 #include "VerdaderoFalso.h"
 #include <thread>
 #include <algorithm>
-
 #include <format>
-#include <sys/ioctl.h> // Tamaño de la terminal
 
-#define TRISTE "\U0001F622"
-#define FELIZ "\U0001F604"
 #define VERDE "\033[0;32m"
 #define ROJO "\033[0;31m"
 #define FONDOROJO "\033[0;41m"
