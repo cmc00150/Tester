@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "escriba"
+version = "1.0.0"
+description = "Un programa que extra preguntas de una imagen mediante IA"
+authors = [
+    { name = "cmc00150" }
+]
+dependencies = [
+    "PILLOW",
+    "google-genai"
+]
+
+[project.scripts]
+escriba = "src.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["src", "src.utils"]
