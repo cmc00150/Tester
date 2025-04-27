@@ -6,12 +6,16 @@ using namespace filesystem;
 
 int main(int argc, char* argv[]) {
 try {
+#if defined(_WIN32) | defined(_WIN64)
+    SetConsoleOutputCP(CP_UTF8); // Establecemos la salida de la consola para que interprete carácteres UTF-8
+#endif
+
     if (argc < 2) throw runtime_error("[Error] debe pasarse al menos 2 parámetros [flag] [directorio]");
 
     string flag, ruta;
     float tiempo = 0;
     int penalizacion = 0;
-    bool randomSolicitado = false, activarHistorial = true, modoVentana = false;
+    bool randomSolicitado = false, historial = false;
 
     for (int i = 1; i < argc; i++) {
         if (string(argv[i]) == "-vf" or string(argv[i]) == "-ab") {
@@ -22,40 +26,32 @@ try {
                 if (toupper(respuesta) != 'S') continue;
             }
             flag = argv[i];
-        } 
-        
-        else if (string(argv[i]) == "--random")
+        } else if (string(argv[i]) == "--random")
             randomSolicitado = true;
 
         else if (string(argv[i]) == "--time") {
-            if (i == (argc - 1)) throw runtime_error("[Error] Valor de la opción --time está fuera de rango");
-            
+            if (i == (argc - 1)) throw runtime_error("[Error] --time no tiene un valor definido");
+
             else if (isdigit(*argv[i + 1]) and *argv[i + 1] >= 0)
                 tiempo = stof(string(argv[++i]));
             else
                 throw runtime_error("[Error] valor " + string(argv[i + 1]) + " del parámetro --tiempo invalido");
-        } 
-        
-        else if (string(argv[i]) == "--penalty") {
-            if (i == (argc - 1)) throw runtime_error("[Error] Valor de la opción --penalty está fuera de rango");
-            
+        } else if (string(argv[i]) == "--penalty") {
+            if (i == (argc - 1)) throw runtime_error("[Error] --penalty no tiene un valor definido");
+
             if (isdigit(*argv[i + 1]) and *argv[i + 1] >= 0)
                 penalizacion = stoi(string(argv[++i]));
             else
                 throw runtime_error("[Error] valor " + string(argv[i + 1]) + " del parámetro --penalty invalido");
 
-        } 
-        
-        else if (string(argv[i]) == "--history") {
-            if (i == (argc - 1)) throw runtime_error("[Error] Valor de la opción --history está fuera de rango");
-            
-            if ((string(argv[i + 1]) == "true" or string(argv[i + 1]) == "false") and *argv[i + 1] >= 1)
-                activarHistorial = (argv[++i][0] == 't');
+        } else if (string(argv[i]) == "--history") {
+            if (i == (argc - 1)) throw runtime_error("[Error] --history no tiene un valor definido");
+
+            if (string(argv[i + 1]) == "true" or string(argv[i + 1]) == "false")
+                historial = (*argv[++i] == 't');
             else
                 throw runtime_error("[Error] valor: " + string(argv[i + 1]) + " del parámetro --history invalido");
-        }
-
-        else if (argv[i][0] != '-') {
+        } else if (argv[i][0] != '-') {
             // Si NO es una "flag" o una opción (porque no comienza por -):
             if (!ruta.empty())
                 throw runtime_error("[Error] no puedes asignar dos rutas");
@@ -66,22 +62,21 @@ try {
                 throw runtime_error("[Error] La ruta '" + ruta + "' no es un archivo");
 
             size_t pos = ruta.rfind('.'); // Buscamos su extensión
-            if (pos == string::npos or ruta.substr(pos) != ".txt") { // Si no se ha encontrado una extensión o es distinta a .txt se lanza una advertencia
+            if (pos == string::npos or ruta.substr(pos) !=
+                                       ".txt") { // Si no se ha encontrado una extensión o es distinta a .txt se lanza una advertencia
                 char respuesta;
                 cout << "¡CUIDADO! El archivo no tiene la extensión .txt ¿Desea utilizarlo aun así? [S/N]: ";
                 cin >> respuesta;
                 if (toupper(respuesta) != 'S') exit(EXIT_FAILURE);
-                                       }
+            }
         } // El resto de casos sería una opción o una "flag"
         else {
             throw runtime_error("[Error] el argumento " + string(argv[i]) + " no existe");
         }
     }
 
-    SetConsoleOutputCP(CP_UTF8); // Establecemos la salida de la consola para que interprete carácteres UTF-8
-
     if (flag.empty()) throw runtime_error("[Error] no se ha indicado cual es el tipo de las preguntas");
-    if (ruta.empty()) throw runtime_error("[Error] no se ha indicado donde se ecuentra el archivo");
+    if (ruta.empty()) throw runtime_error("[Error] no se ha indicado donde se encuentra el archivo");
 
     Tester cuestionario(ruta, flag);
 
@@ -89,7 +84,7 @@ try {
     if (penalizacion) cuestionario.setPenalizacion(penalizacion);
 
     while (!cuestionario.fin()) {
-        if (activarHistorial) cuestionario.limpiarPantalla();
+        if (!historial) cuestionario.limpiarPantalla();
         cuestionario.barraProgreso();
         cuestionario.mostrarEnunciado();
 
@@ -121,7 +116,7 @@ try {
 
 		--penalty		Establece cuantos fallos hay que tener para restar una buena (default: ninguna), debe ser mayor que 1.
 
-		--history		Evita que se limpie la pantalla después de cada pregunta [true|false] (default: true).)"
+		--history		Evita que se limpie la pantalla después de cada pregunta [true|false] (default: false).)"
         << endl;
 }
 
