@@ -1,0 +1,46 @@
+1) Existe una lista de puertos dedicados para que cualquier servidor reciba peticiones a través del protocolo UDP
+a) Falso
+B) Verdadero
+
+2) Al programar sockets con UDP se debe tener en cuenta que no hay "conexión" entre el cliente y el servidor, por lo que el remitente anade explícitamente la dirección IP y el puerto de destino en cada paquete.
+a) Falso
+B) Verdadero
+
+3) El MSS es un parámetro que determina ...
+a) El tamaño máximo del segmento UDP
+b) El tamaño máximo del payload del segmento UDP
+c) El tamaño máximo del datagrama
+D) El tamaño máximo del payload del segmento TCP
+
+4) El protocolo TCP nos ofrece un servicio ...
+a) No orientado a conexión
+b) Con una alta eficiencia al tener una cabecera pequeña
+c) Con entrega no fiable de paquetes
+D) Con recepción ordenada de paquetes
+
+5) En la programación con sockets, cuando nos encontramos una instrucción de lectura de un buffer la ejecución del programa se bloqueará hasta que se reciban datos
+a) Falso
+B) Verdadero
+
+6) En una aplicación sockets TCP, el servidor se encarga de decirle la fecha y la hora actual al cliente para que este la muestre. Una vez el servidor le manda dicho contenido, el cliente lo recibe y lo almacena en un fichero log de suya. De manera que el cliente debe mostrar el contenido antes de cerrar el socket o de lo contrario habrá un error por haber cerrado la conexión con el servidor.
+a) Verdadero
+B) Falso
+
+7) La multiplexación con TCP identifica cada socket usando ...
+a) IP origen, IP destino
+B) IP origen, Puerto origen, IP destino, Puerto destino
+c) IP origen, puerto origen
+d) Puerto origen, puerto destino
+
+8) Un problema en las conexiones UDP es que los datos transmitidos puede que se reciban desordenados o que se pierdan.
+A) Verdadero
+b) Falso
+
+9) Un flujo es una secuencia de caracteres que fluye hacia o desde un proceso en sockets UDP.
+a) Verdadero
+B) Falso
+
+10) Si en un segmento TCP el campo SEQ = 45 y se transportan 10 bytes que llegan correctamente. El ACK del segmento del receptor será:
+a) 45
+B) 55
+c) 35

@@ -1,0 +1,26 @@
+Okay, aquí tienes las preguntas extraídas de la imagen, formateadas como solicitaste y con la respuesta correcta marcada en mayúscula:
+
+1) En el mensaje de petición HTTP el comando usado al solicitar una página es ...
+a) TRACE
+B) GET
+c) HEAD
+d) PUT
+
+2) En las versiones HTTP es cierto que:
+a) HTTP/2.0 sustituye a HTTP/1.1 utilizando comandos-repuestas diferentes
+B) HTTP/1.1 permite especificar conexiones no persistentes
+c) HTTP/1.0 permite especificar el dominio de descarga de una página
+
+3) La línea de cabecera Connection (del mensaje HTTP) indica si se ha establecido una conexión TCP o UDP
+A) Falso
+b) Verdadero
+
+4) La autenticación HTTP exige el envío de las credenciales en cada solicitud
+a) Falso
+B) Verdadero
+
+5) Las cookies son datos que se almacenan en ...
+a) En la nube, identificando a cada cliente
+B) En el navegador del cliente, asociadas a un servidor
+c) Durante el periodo que dura una sesión HTTP
+d) El servidor, asociadas a cada cliente que accede a él

@@ -1,0 +1,50 @@
+```
+1) Los mensajes DHCP se envían mediante ...
+a) Conexiones TCP entre cliente y servidor
+b) Segmentos UDP enviados a todos (broadcast)
+c) Datagramas ICMP
+D) Segmentos UDP entre cliente y servidor
+
+2) DNS es una base de datos centralizada para la resolución de nombres
+a) Verdadero
+B) Falso
+
+3) Cuando un cliente se quiere unir a una red comienza enviando el mensaje DHCP ...
+a) DHCPINFORM
+b) DHCPREQUEST
+C) DHCPDISCOVER
+d) DHCPACK
+
+4) La utilidad `ping` emplea para detectar conectividad ...
+a) Segmentos UDP enviados a un servidor de ECO
+B) Datagramas ICMP de solicitud de eco
+
+5) El servidor DHCP confirmará al cliente la concesión de la dirección IP mediante un mensaje ...
+a) DHCP_OFFER
+b) DHCP_CONFIRM
+C) DHCP_ACK
+
+6) Los mensajes DNS se envían usando ...
+A) TCP o UDP según los casos
+b) Segmentos UDP siempre
+c) Segmentos TCP siempre
+
+7) Los mensajes del protocolo DNS ...
+a) Usan el puerto 80
+B) Pueden alojar múltiples consultas y respuestas
+c) Tienen una estructura distinta según sean de solicitud o respuesta
+d) Se envía directamente sobre datagramas IP
+
+8) Las direcciones IP obtenidas por DHCP son válidas por un tiempo limitado
+A) Verdadero
+b) Falso
+
+9) La dirección IP facilitada por el servidor DHCP podrá ser reutilizada cuando el cliente la libere
+a) Falso
+B) Verdadero
+
+10) El servidor DHCP en una red debe ...
+a) Contar con el archivo HOSTS para asignar direcciones
+B) Tener una dirección IP fija
+c) Actuar también como servidor DNS
+```

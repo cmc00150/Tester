@@ -1,0 +1,50 @@
+1) Si se aplica OSPF jerárquico, un router interno a un área contendrá en su tabla de rutas una entrada ...
+a) para cada router de su área y una entrada para cada una del resto de áreas
+B) para cada red del área troncal
+c) por cada red del sistema autónomo
+
+2) Los sistemas autónomos son ...
+A) Conjuntos de redes bajo una misma organización administrativa
+b) Métodos para gestiona las direcciones IP de una organización
+c) Sistemas de interconexión entre redes
+d) Grupos heterogéneos de LAN y WAN
+
+3) El mensaje KeepAlive de BGP sirve para ...
+A) indicar que la conexión establecida sigue viva
+b) anunciar rutas a los vecinos
+c) indicar que se quiere establecer una conexión persistente
+
+4) Los router BGP abren una conexión TCP con sus pares para intercambiar datos
+A) Verdadero
+b) Falso
+
+5) RIP se considera un protocolo de enrutamiento interno a sistemas autónomos
+A) Falso
+b) Verdadero
+
+6) El principio de optimalidad de los algoritmos de enrutamiento dice que ...
+a) Cuanto más pequeña sea la tabla de enrutamiento más optima será
+B) Si B está en la ruta optima de A a C, la ruta de B a C también es optima
+c) Si dos entradas en la tabla de enrutamiento comparten máscara son optimas
+
+7) Un router externo interconecta ...
+A) Varios SA
+b) Varias WAN
+c) Varias LAN
+
+8) ¿Cuál es el máximo número de saltos en RIP?
+a) 16
+B) 15
+c) 25
+d) 20
+
+9) Los anuncios de un router BGP se envían ...
+a) A todos los router BGP del SA
+B) Solo a los routers a los que está directamente conectado
+c) Globalmente a todos los router mediante broadcast
+
+10) El protocolo BGP lo usan los router ...
+A) Frontera con otros SA
+b) En todo el SA
+c) Internos al SA
+d) Troncales

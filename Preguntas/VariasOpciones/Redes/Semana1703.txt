@@ -1,0 +1,28 @@
+De acuerdo, aquí tienes las preguntas extraídas de la imagen con el formato solicitado y las respuestas correctas marcadas en mayúsculas:
+
+1) Los mensajes DHCP se envían mediante ...
+a) Segmentos UDP entre cliente y servidor
+B) Segmentos UDP enviados a todos (broadcast)
+c) Datagramas ICMP
+d) Conexiones TCP entre cliente y servidor
+
+2) Cuando un cliente hace una consulta DNS la envía ...
+a) Al servidor raíz más próximo
+B) A su servidor DNS local
+c) A Correos para que la resuelva el funcionario correspondiente
+d) Al servidor autorizado de zona
+
+3) El protocolo ICMP envía sus paquetes de datos usando ...
+a) Un mensaje NNTP
+b) Un segmento TCP
+c) Un segmento UDP
+D) Un datagrama IP
+
+4) Además de la dirección IP, un servidor DHCP también puede facilitar ...
+a) El servidor UDP por defecto
+B) El servidor DNS por defecto
+c) El servidor HTTP por defecto
+
+5) Las direcciones IP obtenidas por DHCP son válidas por un tiempo limitado
+A) Verdadero
+b) Falso
