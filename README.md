@@ -23,7 +23,7 @@ El proyecto consta de dos partes:
 
 ### ⬇️ Descarga
 1. Descarga los programas de <a style="text-decoration: underline" href="https://github.com/cmc00150/Tester/releases/tag/v1.0.0">releases</a>.
-2. Escoge **texter.exe** y **escriba-1.0.0-py3.whl**.
+2. Escoge **texter.exe** y **escriba-1.0.0-py3-none-any.whl**.
 ### 🏋️‍♂️ Preparación
 1. El escriba.whl se puede extraer en tu entorno global de python, pero para tenerlo más organizado lo suyo es que creemos uno solo para él. De forma que luego sea mas facil de desinstalar si asi se quiera.
    <p></p>
@@ -45,8 +45,8 @@ El proyecto consta de dos partes:
 </h2>
 
 ### ⬇️ Descarga
-1. Descargamos los programas de <a style="text-decoration: underline" href="https://github.com/cmc00150/Tester/releases/tag/v1.0.0">releases</a>.
-2. Escogemos tanto **texter** como **escriba-1.0.0-py3.whl**.
+1. Descarga los programas de <a style="text-decoration: underline" href="https://github.com/cmc00150/Tester/releases/tag/v1.0.0">releases</a>.
+2. Escoge tanto **texter** como **escriba-1.0.0-py3-none-any.whl**.
 ### 🏋️‍♂️ Preparación
 1. El escriba.whl se puede extraer en tu entorno global de python, pero para tenerlo más organizado lo suyo es que creemos uno solo para él. De forma que luego sea mas facil de desinstalar si asi se quiera.
    <a name="activar-venv"></a>
@@ -61,6 +61,7 @@ El proyecto consta de dos partes:
 # ✅ Ejecución
 > [!TIP]
 > Puedes poner './nombre_programa' sin argumentos para ver las opciones en cualquier momento
+
 > [!NOTE]
 > En windows es lo mismo solo que le añade la extensión .exe a cada uno.
 <h2><img src="assets/logos/Escriba_logo.png" width="5%"></h2>
