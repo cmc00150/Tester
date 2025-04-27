@@ -14,6 +14,8 @@ public:
 	void añadirOpcionCorrecta ( const char op ) { opCorrecta = op; }
 	char verOpcionCorrecta() const { return opCorrecta; }
 	virtual string toString()=0;
+
+    virtual ~Pregunta() = default;
 };
 
 #endif //PREGUNTA_H
