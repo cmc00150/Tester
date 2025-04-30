@@ -59,8 +59,8 @@ El proyecto consta de dos partes:
 3. El ejecutable estará dentro de la carpeta `nombre_del_entorno/bin`.
 
 # ✅ Ejecución
-> [!TIP]
-> Puedes poner './nombre_programa' sin argumentos para ver las opciones en cualquier momento
+> [!IMPORTANT]
+> Por como funciona linux, los archivos se descargaran sin permisos de ejecución. Por lo que para usarlos deberás darles permisos con `chmod u+x <nombre_programa>`. De esta forma solo tu tendrás permisos de ejecución.
 
 > [!NOTE]
 > En windows es lo mismo solo que le añade la extensión .exe a cada uno.
@@ -90,6 +90,9 @@ OPCIONES:
 
   --history               Evita que se limpie la pantalla después de cada pregunta [true|false] (default: false).
 ```
+
+> [!TIP]
+> Puedes poner './nombre_programa' sin argumentos para ver las opciones en cualquier momento
 
 # ⚠️ Eliminación
 ### Escriba
