@@ -3,7 +3,6 @@ a) El valor de los registros de la CPU en el momento en el que el proceso fue in
 b) La lista de ficheros abiertos por el proceso.
 c) La información de planificación (prioridad, estado ..)
 D) La pila del proceso.
-expl - La pila del proceso sí que se encuentra dentro de la imagen del proceso pero en el BCP solo se define la entidad del proceso en el SO, es decir, el resto de opciones (no confundir con la pila de procesos dentro del BCP, que son los subprocesos que puede generar).
 
 10)¿Cuántos procesos nuevos crea la sentencia for (i=0; i<3; i++) fork(); ?
 a) 7
@@ -64,56 +63,48 @@ A) La política de planificación por “Round-Robin' no genera problemas de ina
 b) Cuando no existen procesos en la cola de preparados, la CPU permanece sin ejecutar instrucciones hasta que llegue algún proceso.
 c) El algoritmo de colas con retroalimentación consiste en aumentar gradualmente la prioridad de los procesos que están en estado bloqueado.
 d) La política de planificación basada en prioridades, tiene en cuenta el tiempo que los procesos han estado en la cola de "Preparados”.
-expl - La política Round Robin (RR) es equitativa, ya que asigna un tiempo igual (quantum) a todos los procesos, lo que evita problemas de inanición.
 
 16) Utilizando la planificación Round Robin, ¿Qué cuanto de tiempo favorece a los procesos intensivos en E/S frente a los intensivos en consumo de CPU?
 a) un cuanto grande.
 B) un cuanto pequeño.
 c) un cuanto intermedio,
 d) RR trata por igual sin favorecer especialmente a ninguno, con independencia del cuanto.
-expl - Un quantum más pequeño permite a los procesos intensivos en E/S pasar más rápidamente a estado "Preparado" después de realizar operaciones de entrada/salida, reduciendo así su tiempo de espera.
 
 14) Cuando termina el quantum de tiempo de un proceso se produce la transición entre los estados:
 a) de Bloqueado a Suspendido.
 b) de en Ejecución a Bloqueado.
 C) de en Ejecución a Preparado.
 d) de Bloqueado a Preparado.
-expl - Cuando un proceso agota su quantum en Round Robin, pasa de Ejecución a Preparado para esperar su turno de CPU nuevamente.
 
 15) En un sistema con un algoritmo de planificación prioridad al más corto se puede producir un cambio de proceso cuando:
 a) El proceso solicita una E/S o termina el proceso.
 B) El proceso solicita una E/S, termina el proceso o existe otro proceso preparado con más prioridad.
 c) El proceso solicita una E/S, termina el proceso o llegan al sistema más procesos más cortos que el proceso en ejecución actual.
 d) El proceso solicita una E/S, termina el proceso o se acaba su cuanto de ejecución.
-expl - Los algoritmos basados en prioridad pueden realizar un cambio de proceso cuando aparece uno con mayor prioridad.
 
 3) Los algoritmos de planificación de CPU afectan
 A) al tiempo total que el proceso pasa en la cola de procesos preparados/listos.
 b) al tiempo total que el proceso pasa en la cola de procesos bloqueados.
 c) al tiempo total que el proceso pasa bloqueado y suspendido.
 d) al tiempo total que el proceso pasa en estado de ejecución.
-expl -  Un algoritmo de planificación solo determinan cuánto tiempo debe esperar un proceso antes de obtener acceso a la CPU.
 
 13) ¿Cuál de las siguientes afirmaciones referentes al planificador a largo plazo es FALSA?
 a) El planificador a largo plazo se encarga de controlar el grado de multiprogramación.
 b) Es el planificador típico de los sistemas de proceso por lotes.
 C) El planificador a largo plazo se encarga de decidir qué procesos de los que están en disco son llevados a memoria principal.
 d) El planificador a largo plazo se encarga de decidir a qué proceso se le asignará la CPU.
-expl - El planificador a largo plazo no asigna directamente la CPU, sino que controla qué procesos pasan de disco a memoria principal. La asignación de CPU es tarea del planificador a corto plazo.
 
 10) En el algoritmo de planificación de CPU el algoritmo clásico de colas multinivel con retroalimentación:
 a) Los procesos permanecen en la misma cola durante el tiempo que dura su ejecución.
 b) Todas las colas ejecutan el mismo algoritmo de planificación, cada una con procesos diferentes.
 c) Cada cola tiene un conjunto de procesos, y cada proceso tiene su propio algoritmo de planificación.
 D) Cada cola puede ejecutar algoritmos diferentes.
-expl - Cada cola puede ejecutar distintos algoritmos según las necesidades específicas de cada nivel.
 
 11) En un sistema operativo, el planificador a largo plazo determina:
 A) El grado de multiprogramación del sistema.
 b) De entre los procesos que están esperando la CPU cuál es el siguiente proceso a ejecutar.
 c) Los mecanismos para despachar procesos.
 d) El que suspende los procesos que están bloqueados porque están esperando una operación de E/S.
-expl - El objetivo del planificador a largo plazo es el de dar al planificador de la CPU una mezcla equilibrada de trabajos, tanto los que usan mucho la CPU como los que utilizan mucho la E/S. 
 
 12) En un sistema planificado, existe una única tarea T1 para la se ha previsto 10 u.t de ráfaga de
 CPU y ha completado hasta el momento 5 u.t. En ese momento llega un nuevo proceso T2 con un tiempo de ráfaga de 6 u.t.
@@ -121,7 +112,6 @@ a) Si la planificación es SJF se ejecutará T2
 b) Si la planificación es SRT se ejecutará T2.
 C) Tanto si se planifica con SJF o SRT se sigue ejecutando T1.
 d) Tanto si se planifica con SJF o SRT se ejecutará T2.
-expl - Si utilizamos SJF se elige T1 porque en ese momento era el de menor duración (el único) y estos algoritmos no pueden cambiar el proceso a mitad de ejecución. Si elegimos SRT sigue ejecutándose T1 porque el tiempo restante es 5 u.t. mientras que el de T2 es 6 u.t.
 
 3) El tiempo de cambio de contexto:
 a) Es inferior entre dos hilos del mismo proceso que entre hilos de procesos distintos.

@@ -3,28 +3,24 @@ a) Estructura en Niveles.
 b) Máquina Virtuales
 c) Monolíticos.
 D) Micronúcleo.
-expl - Una tendencia de los sistemas operativos modernos es la de trasladar el código a capas superiores, y eliminar la mayor parte posible del sistema operativo para mantener un núcleo mínimo o microkernel. El punto de vista usual es el de implantar la mayoría de las funciones del sistema operativo como procesos de usuario
 
 23, ¿Cuál de los siguientes enunciados NO DEFINE correctamente a un Sistema operativo?
 a) Contiene las rutinas de atención a las interrupciones.
 b) Se ejecuta en modo supervisor.
 c) Se carga en la memoria principal durante el arranque del sistema,
 D) Cuando hay sobrecarga puede estar en estado suspendido,
-expl - El resto son verdaderas mientras que la d es falsa, ya que el SO es el que gestiona gran parte del sistema y no puede pasar a suspendido como el resto de procesos.
 
 2) En un sistema operativo de multiprogramación:
 a) Se ejecuta más rápido un proceso.
 b) Se utilizan menos estructuras de datos que un sistema monoprogramado.
 C) Se ejecutan más procesos en el mismo periodo de tiempo que un sistema monoprogramado.
 d) Se utiliza sólo en las grandes máquinas y no en la computación doméstica
-expl - Mientras que si un proceso en un SO monoprogramado usa la E/S este tiempo de CPU se desperdicia, en un multiprogramado pueden ejecutarse otros procesos.
 
 21) Tenemos un sistema multiprogramado con una única CPU. ¿Cuál de las siguientes combinaciones NUNCA podría ser cierta?
 a) Podría ser un sistema concurrente y de tiempo real.
 B) Podría ser un sistema de tiempo compartido y además de procesamiento paralelo.
 c) Podría ser un sistema por lotes y además multiusuario.
 d) Podría ser un sistema de tiempo compartido y multiusuario.
-expl - 
 
 1) ¿Cuál de estos sistemas informáticos NO se puede dar?
 a) Sistema por lotes no multiprogramado.
