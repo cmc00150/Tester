@@ -1,5 +1,3 @@
-De acuerdo, aquí tienes las preguntas extraídas de la imagen con el formato solicitado y las respuestas correctas marcadas en mayúsculas:
-
 1) Los mensajes DHCP se envían mediante ...
 a) Segmentos UDP entre cliente y servidor
 B) Segmentos UDP enviados a todos (broadcast)
