@@ -1,5 +1,3 @@
-De acuerdo, aquí tienes las preguntas extraídas de la imagen con el formato solicitado y las respuestas correctas marcadas en mayúscula:
-
 1) El protocolo RIP envía sus mensajes en segmentos UDP
 a) Falso
 B) Verdadero
