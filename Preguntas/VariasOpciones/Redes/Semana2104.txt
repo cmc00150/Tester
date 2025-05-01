@@ -1,5 +1,3 @@
-Okay, aquí tienes las preguntas extraídas de la imagen, formateadas como solicitaste y con la respuesta correcta marcada en mayúscula:
-
 1) En el mensaje de petición HTTP el comando usado al solicitar una página es ...
 a) TRACE
 B) GET
