@@ -31,7 +31,7 @@ El proyecto consta de dos partes:
    > 1. Creamos una carpeta donde vamos a tener el entorno de python: `mkdir carpeta_venv`.
    > 2. Nos metemos dentro de la carpeta para mayor comodidad: `cd carpeta_venv`.
    > 3. Creamos el entorno venv: `python3 -m venv nombre_del_entorno`.
-   > 4. Dentro de la carpeta principal, se habrá creado otra con el nombre del venv. Para activarlo debemos llamar al **activate** dentro de esta: `./nombre_del_entorno/activate`.
+   > 4. Dentro de la carpeta principal, se habrá creado otra con el nombre del venv. Para activarlo debemos llamar al **activate** dentro de esta: `nombre_del_entorno/Scritps/activate`.
 2. Ahora para extraer el archivo wheel debemos poner: `pip install escriba-1.0.0-py3.whl`.
 3. El ejecutable estará dentro de la carpeta `nombre_del_entorno/Scritps`.
 > [!IMPORTANT] 
