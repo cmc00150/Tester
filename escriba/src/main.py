@@ -66,6 +66,8 @@ def main():
 
     imagenes = []
     tipo = ""
+    docpath = None
+    doc_url = "https://discovery.ucl.ac.uk/id/eprint/10089234/1/343019_3_art_0_py4t4l_convrt.pdf"
     for i in range(2, len(sys.argv)):
         tipo = sys.argv[i].split('.')[-1] 
         if tipo != "pdf": 
@@ -83,7 +85,7 @@ def main():
                 mime_type='application/pdf',
             )
 
-    if not imagenes:
+    if not imagenes and not docpath:
         print("No se han pasado imágenes, por favor, introduce al menos una imagen.")
         exit(1)
 
@@ -92,7 +94,7 @@ def main():
     hilo.start()
 
     try:
-        respuesta = cliente.models.generate_content(model='gemini-2.5-pro-exp-03-25',
+        respuesta = cliente.models.generate_content(model='gemini-2.0-flash',
                                                     contents = [prompt] + imagenes)
     finally:
         evento_terminado.set()
