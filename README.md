@@ -63,7 +63,7 @@ El proyecto consta de dos partes:
 > Por como funciona linux, los archivos se descargaran sin permisos de ejecución. Por lo que para usarlos deberás darles permisos con `chmod u+x <nombre_programa>`. De esta forma solo tu tendrás permisos de ejecución.
 
 > [!NOTE]
-> En windows es lo mismo solo que le añade la extensión .exe a cada uno.
+> En windows es lo mismo solo que le añade la extensión `.exe` a cada uno, además de ser `.\` en vez de `./`.
 <h2><img src="assets/logos/Escriba_logo.png" width="5%"></h2>
 
 ```
