@@ -63,13 +63,23 @@ def main():
     cliente = genai.Client(api_key=API_KEY)
 
     imagenes = []
+    tipo = ""
     for i in range(2, len(sys.argv)):
-        with open(sys.argv[i], 'rb') as f:
-            bytesImagen = f.read()
-        imagenes.append(types.Part.from_bytes(
-                            data=bytesImagen, # Le pasamos la imagen en bytes
-                            mime_type=f"image/{sys.argv[i].split('.')[-1]}") # Dividimos el nombre por el punto y cogemos la extensión al final
-                        ) 
+        tipo = sys.argv[i].split('.')[-1] 
+        if tipo not "pdf": 
+            with open(sys.argv[i], 'rb') as f:
+                bytesImagen = f.read()
+                imagenes.append(types.Part.from_bytes(
+                                    data=bytesImagen, # Le pasamos la imagen en bytes
+                                    mime_type=f"image/{tipo}") # Dividimos el nombre por el punto y cogemos la extensión al final
+                                ) 
+        else:
+            docpath = pathlib.Path(sys.argv[i])
+            docpath.write_bytes(httpx.get(doc_url).content)
+            types.Part.from_bytes(
+                data=docpath.read_bytes(),
+                mime_type='application/pdf',
+            )
 
     if not imagenes:
         print("No se han pasado imágenes, por favor, introduce al menos una imagen.")
