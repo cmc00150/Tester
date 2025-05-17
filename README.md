@@ -36,6 +36,7 @@ El proyecto consta de dos partes:
 3. El ejecutable estará dentro de la carpeta `nombre_del_entorno/Scritps`.
 4. Al pedirte una clave API, deberás cogerla del servicio de google: https://aistudio.google.com/prompts/new_chat. Donde pone `Get API key` (arriba a la derecha).
 5. Pega la key, vuelve a iniciar el escriba y Voilà!!
+
 > [!IMPORTANT] 
 > Si se hace de forma global, al instalarse aparecerá: `WARNING: The script escriba.exe is installed in 'C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts' which is not on PATH`. Esto lo que te está diciendo es que el **escriba** se ha descargado en esa localizacion y que no es está en el PATH, por lo que si quieres usarlo en otro lado tienes que usar rutas. El ejecutable estará en esa carpeta __Scripts__.
 
@@ -59,6 +60,8 @@ El proyecto consta de dos partes:
    > 4. Dentro de la carpeta principal, se habrá creado otra con el nombre del venv. Para activarlo debemos llamar al **activate** dentro de esta: `source nombre_del_entorno/bin/activate`.
 2. Ahora para extraer el archivo wheel debemos poner: `pip install escriba-1.0.0-py3.whl`.
 3. El ejecutable estará dentro de la carpeta `nombre_del_entorno/bin`.
+4. Al pedirte una clave API, deberás cogerla del servicio de google: https://aistudio.google.com/prompts/new_chat. Donde pone `Get API key` (arriba a la derecha).
+5. Pega la key, vuelve a iniciar el escriba y Voilà!!
 
 # ✅ Ejecución
 > [!IMPORTANT]
