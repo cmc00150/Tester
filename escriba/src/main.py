@@ -3,6 +3,8 @@ from google.genai import types
 from src.utils.functions import *
 import sys
 import threading
+import pathlib
+import httpx
 
 def main():
 
@@ -66,7 +68,7 @@ def main():
     tipo = ""
     for i in range(2, len(sys.argv)):
         tipo = sys.argv[i].split('.')[-1] 
-        if tipo not "pdf": 
+        if tipo != "pdf": 
             with open(sys.argv[i], 'rb') as f:
                 bytesImagen = f.read()
                 imagenes.append(types.Part.from_bytes(
