@@ -168,8 +168,7 @@ void Tester::barraProgreso() {
 	else
 		cout << FONDOVERDE;
 
-	cout << inicio.replace(posPorcentaje, porcentajeStr.length(), porcentajeStr) << endl;
-	cout << RESETEARFORMATO;
+	cout << inicio.replace(posPorcentaje, porcentajeStr.length(), porcentajeStr) << RESETEARFORMATO << endl << endl;
 }
 
 /**
