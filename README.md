@@ -15,6 +15,9 @@ El proyecto consta de dos partes:
   </tr>
 </table>
 
+> [!important]
+> **PARA MUCHA MÁS INFORMACIÓN, ESQUEMAS Y AYUDAS VISITA** 👉 https://deepwiki.com/cmc00150/Tester/1-home
+
 # Modo de uso
 <h2>
   <img src="assets/iconos/windows.svg" width=35px>
