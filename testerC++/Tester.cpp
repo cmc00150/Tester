@@ -233,15 +233,15 @@ void Tester::resumen() {
 
 	stringstream aciertosFinal;
 	aciertosFinal << aciertos << " - "
-		<< setprecision(4) << ((float)aciertos/preguntas.size())*100;
+		<< setprecision(4) << ((float)aciertos/preguntas.size())*100 << "%";
 
 	stringstream fallosFinal;
 	fallosFinal << (int)(preguntas.size() - aciertos) << " - "
-		<< setprecision(4) << (((float)preguntas.size() - aciertos)/preguntas.size())*100;
+		<< setprecision(4) << (((float)preguntas.size() - aciertos)/preguntas.size())*100 << "%";
 
 	stringstream aciertosFallosFinal;
 	aciertosFallosFinal << setprecision(2) << (aciertos - ((penalizacion != INT_MAX)? ((float)(preguntas.size() - aciertos)/penalizacion) : 0)) << " - "
-		<< setprecision(4) << ((aciertos - ((penalizacion != INT_MAX)? ((float)(preguntas.size() - aciertos)/penalizacion) : 0))  /preguntas.size())*100;
+		<< setprecision(4) << ((aciertos - ((penalizacion != INT_MAX)? ((float)(preguntas.size() - aciertos)/penalizacion) : 0))  /preguntas.size())*100 << "%";
 
 	stringstream ventana;
 	ventana << lineas[0] << endl;
