@@ -1,4 +1,8 @@
 # Tester
+> [!caution]
+> ### El _escriba_ se encuentra capado debido a que Google ha quitado la API gratuita de Gemini 2.5 Pro.
+> Sigue funcionando pero actualmente usa Gemini 2.0 Flash, por lo que no acepta pdf y puede que las respuestas sean más tontas. Se recomienda coger el prompt manualmente y usarlo con otros LLM <img src="assets/iconos/openai.svg" width=20px >[(cod. aquí ✋)](https://github.com/cmc00150/Tester/blob/main/escriba/src/main.py). Ganarán esta batalla, pero no la guerra, volveremos. 🪖
+
 El proyecto consta de dos partes:
 <table align="center">
   <tr>
@@ -25,7 +29,7 @@ El proyecto consta de dos partes:
 </h2>
 
 ### ⬇️ Descarga
-1. Descarga los programas de <a style="text-decoration: underline" href="https://github.com/cmc00150/Tester/releases/tag/v1.0.0">releases</a>.
+1. Descarga los programas de <a href="https://github.com/cmc00150/Tester/releases/tag/v1.0.0">releases</a>.
 2. Escoge **texter.exe** y **escriba-1.0.0-py3-none-any.whl**.
 ### 🏋️‍♂️ Preparación
 1. El escriba.whl se puede extraer en tu entorno global de python, pero para tenerlo más organizado lo suyo es que creemos uno solo para él. De forma que luego sea mas facil de desinstalar si asi se quiera.
@@ -43,7 +47,7 @@ El proyecto consta de dos partes:
 > [!IMPORTANT] 
 > Si se hace de forma global, al instalarse aparecerá: `WARNING: The script escriba.exe is installed in 'C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts' which is not on PATH`. Esto lo que te está diciendo es que el **escriba** se ha descargado en esa localizacion y que no es está en el PATH, por lo que si quieres usarlo en otro lado tienes que usar rutas. El ejecutable estará en esa carpeta __Scripts__.
 
-<h2 style="display: flex; align-items: center; gap: 5px; ">
+<h2>
   <img src="assets/iconos/apple.svg" width=35px>
   Mac / 
   <img src="assets/iconos/linux.svg" width=35px>
@@ -51,12 +55,10 @@ El proyecto consta de dos partes:
 </h2>
 
 ### ⬇️ Descarga
-1. Descarga los programas de <a style="text-decoration: underline" href="https://github.com/cmc00150/Tester/releases/tag/v1.0.0">releases</a>.
+1. Descarga los programas de <a href="https://github.com/cmc00150/Tester/releases/tag/v1.0.0">releases</a>.
 2. Escoge tanto **texter** como **escriba-1.0.0-py3-none-any.whl**.
 ### 🏋️‍♂️ Preparación
 1. El escriba.whl se puede extraer en tu entorno global de python, pero para tenerlo más organizado lo suyo es que creemos uno solo para él. De forma que luego sea mas facil de desinstalar si asi se quiera.
-   <a name="activar-venv"></a>
-   
    > 1. Creamos una carpeta donde vamos a tener el entorno de python: `mkdir carpeta_venv`.
    > 2. Nos metemos dentro de la carpeta para mayor comodidad: `cd carpeta_venv`.
    > 3. Creamos el entorno venv: `python3 -m venv nombre_del_entorno`.
