@@ -44,7 +44,6 @@ try {
                 penalizacion = stoi(string(argv[++i]));
             else
                 throw runtime_error("[Error] valor " + string(argv[i + 1]) + " del parámetro --penalty invalido");
-
         }
         else if (string(argv[i]) == "--history") {
             if (i == (argc - 1)) throw runtime_error("[Error] --history no tiene un valor definido");
@@ -57,7 +56,7 @@ try {
         else if (string(argv[i]) == "--numQuestions") {
             if (i == (argc - 1)) throw runtime_error("[Error] --numQuestions no tiene un valor definido");
 
-            if (isdigit(*argv[i + 1]) and *argv[i+1] >= 0)
+            if (isdigit(*argv[i + 1]) and *argv[i+1] > 0)
                 tam = stoi(string(argv[++i]));
             else
                 throw runtime_error("[Error] valor: " + string(argv[i + 1]) + " del parámetro --numQuestion invalido");
@@ -96,7 +95,7 @@ try {
 
     while (!cuestionario.fin() || tam >= 0) {
         if (!historial) cuestionario.limpiarPantalla();
-        cuestionario.barraProgreso();
+        cuestionario.barraProgreso(tam);
         cuestionario.mostrarEnunciado();
 
         char respuesta;
@@ -128,7 +127,9 @@ try {
 
 		--penalty		Establece cuantos fallos hay que tener para restar una buena (default: ninguna), debe ser mayor que 1.
 
-		--history		Evita que se limpie la pantalla después de cada pregunta [true|false] (default: false).)"
+		--history		Evita que se limpie la pantalla después de cada pregunta [true|false] (default: false).
+
+        --numQuestion   Muestra un número determinado de preguntas (default: todas), debe ser mayor que 0.)"
         << endl;
 }
 

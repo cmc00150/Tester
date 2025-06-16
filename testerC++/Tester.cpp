@@ -123,21 +123,22 @@ void Tester::espera(float tiempo) {
 void Tester::comprobarRespuesta(char respuesta) {
 	char opcionCorrecta = (*progreso)->verOpcionCorrecta();
 
-	if (toupper(respuesta) == opcionCorrecta) {
-		aciertos++;
+	bool ok = toupper(respuesta) == opcionCorrecta
+	if (ok) aciertos++;
 
-        cout << VERDE << "Respuesta correcta :D" << endl << endl;
-	}else
-		cout << ROJO << "Respuesta incorrecta :C, la solución era: " << opcionCorrecta << endl << endl;
+    cout << (ok ? VERDE << "Respuesta correcta :D" :
+				   ROJO << "Respuesta incorrecta :C, la solución era: " << opcionCorrecta) 
+	<< endl << endl;
 
 	cout << RESETEARFORMATO;
 }
 
 /**
  * @brief Muestra el progreso.
+ * @param tam Tamaño de la barra de progreso, si no se indica se usa el tamaño de la terminal.
  * @return Devuelve una cadena que representa una barra de progreso.
  */
-void Tester::barraProgreso() {
+void Tester::barraProgreso(int tam = 0) {
 #if defined(_WIN32) || defined(_WIN64)
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     if (!GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi))
@@ -149,21 +150,22 @@ void Tester::barraProgreso() {
 	ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
 	int cols = w.ws_col;
 #endif
+	cols = (tam and tam <= preguntas.size()) ? tam : cols; // Si se ha pasado un tamaño, lo usamos, sino el de la terminal.
     int tamTerminal = cols - 2; // Le restamos dos por los [] del inicio y del final.
 
-	int porcentaje = ((float)pregMostradas/preguntas.size()) * 100;
+	int porcentaje = ((float)pregMostradas/numPreguntas) * 100;
 	string porcentajeStr = " " + to_string(porcentaje) + "% ";
 	size_t posPorcentaje = tamTerminal/2 - 2; // 2 menos porque queremos que este centrado.
 
 	string inicio = "[";
-	string barraProgreso((tamTerminal*pregMostradas)/preguntas.size(), '#');
-	string resto(tamTerminal - barraProgreso.length(),'.');
+	string barra((tamTerminal*pregMostradas)/numPreguntas, '#');
+	string resto(tamTerminal - barra.length(),'.');
 
-	inicio = inicio + barraProgreso + resto + "]";
+	inicio = inicio + barra + resto + "]";
 
-	if (porcentaje <= 100/3.0)
+	if (porcentaje <= 33.333)
 		cout << FONDOROJO;
-	else if (porcentaje > 100/3.0 and porcentaje <= (100/3.0)*2)
+	else if (porcentaje > 33.333 and porcentaje <= 66.666)
 		cout << FONDOAMARILLO;
 	else
 		cout << FONDOVERDE;
@@ -210,8 +212,9 @@ void Tester::desordenar() {
 
 /**
  * @brief Muestra por pantalla un resumen enmarcado.
+ * @param tam Tamaño de las preguntas, si no se indica se usa el tamaño de la lista de preguntas.
  */
-void Tester::resumen() {
+void Tester::resumen(int tam = 0) {
     string lineas[] = {
 			"╭────────────── Puntuación ──────────────╮",
             "├───────────────          ───────────────┤",
@@ -221,6 +224,7 @@ void Tester::resumen() {
             "╰────────────────────────────────────────╯",
             "✘ restan 1✔ : "
     };
+	int numPreguntas = (tam and tam <= preguntas.size()) ? tam : preguntas.size();
 
     lineas[6] = format("{}{}", (penalizacion == INT_MAX)? "NO" : to_string(penalizacion), lineas[6]);
 
@@ -233,15 +237,15 @@ void Tester::resumen() {
 
 	stringstream aciertosFinal;
 	aciertosFinal << aciertos << " - "
-		<< setprecision(4) << ((float)aciertos/preguntas.size())*100 << "%";
+		<< setprecision(4) << ((float)aciertos/numPreguntas)*100 << "%";
 
 	stringstream fallosFinal;
-	fallosFinal << (int)(preguntas.size() - aciertos) << " - "
-		<< setprecision(4) << (((float)preguntas.size() - aciertos)/preguntas.size())*100 << "%";
+	fallosFinal << (int)(numPreguntas - aciertos) << " - "
+		<< setprecision(4) << (((float)numPreguntas - aciertos)/numPreguntas)*100 << "%";
 
 	stringstream aciertosFallosFinal;
-	aciertosFallosFinal << setprecision(2) << (aciertos - ((penalizacion != INT_MAX)? ((float)(preguntas.size() - aciertos)/penalizacion) : 0)) << " - "
-		<< setprecision(4) << ((aciertos - ((penalizacion != INT_MAX)? ((float)(preguntas.size() - aciertos)/penalizacion) : 0))  /preguntas.size())*100 << "%";
+	aciertosFallosFinal << setprecision(2) << (aciertos - ((penalizacion != INT_MAX)? ((float)(numPreguntas - aciertos)/penalizacion) : 0)) << " - "
+		<< setprecision(4) << ((aciertos - ((penalizacion != INT_MAX)? ((float)(numPreguntas - aciertos)/penalizacion) : 0))  /numPreguntas)*100 << "%";
 
 	stringstream ventana;
 	ventana << lineas[0] << endl;
