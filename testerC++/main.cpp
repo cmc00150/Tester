@@ -14,7 +14,7 @@ try {
 
     string flag, ruta;
     float tiempo = 0;
-    int penalizacion = 0;
+    int penalizacion = 0, tam = 0;
     bool randomSolicitado = false, historial = false;
 
     for (int i = 1; i < argc; i++) {
@@ -36,7 +36,8 @@ try {
                 tiempo = stof(string(argv[++i]));
             else
                 throw runtime_error("[Error] valor " + string(argv[i + 1]) + " del parámetro --tiempo invalido");
-        } else if (string(argv[i]) == "--penalty") {
+        }
+        else if (string(argv[i]) == "--penalty") {
             if (i == (argc - 1)) throw runtime_error("[Error] --penalty no tiene un valor definido");
 
             if (isdigit(*argv[i + 1]) and *argv[i + 1] >= 0)
@@ -44,14 +45,24 @@ try {
             else
                 throw runtime_error("[Error] valor " + string(argv[i + 1]) + " del parámetro --penalty invalido");
 
-        } else if (string(argv[i]) == "--history") {
+        }
+        else if (string(argv[i]) == "--history") {
             if (i == (argc - 1)) throw runtime_error("[Error] --history no tiene un valor definido");
 
             if (string(argv[i + 1]) == "true" or string(argv[i + 1]) == "false")
                 historial = (*argv[++i] == 't');
             else
                 throw runtime_error("[Error] valor: " + string(argv[i + 1]) + " del parámetro --history invalido");
-        } else if (argv[i][0] != '-') {
+        }
+        else if (string(argv[i]) == "--numQuestions") {
+            if (i == (argc - 1)) throw runtime_error("[Error] --numQuestions no tiene un valor definido");
+
+            if (isdigit(*argv[i + 1]) and *argv[i+1] >= 0)
+                tam = stoi(string(argv[++i]));
+            else
+                throw runtime_error("[Error] valor: " + string(argv[i + 1]) + " del parámetro --numQuestion invalido");
+        }
+        else if (argv[i][0] != '-') {
             // Si NO es una "flag" o una opción (porque no comienza por -):
             if (!ruta.empty())
                 throw runtime_error("[Error] no puedes asignar dos rutas");
@@ -83,7 +94,7 @@ try {
     if (randomSolicitado) cuestionario.desordenar();
     if (penalizacion) cuestionario.setPenalizacion(penalizacion);
 
-    while (!cuestionario.fin()) {
+    while (!cuestionario.fin() || tam >= 0) {
         if (!historial) cuestionario.limpiarPantalla();
         cuestionario.barraProgreso();
         cuestionario.mostrarEnunciado();
@@ -95,6 +106,7 @@ try {
         cuestionario.comprobarRespuesta(respuesta);
         ++cuestionario;
         cuestionario.espera(tiempo);
+        if (tam) tam--;
     }
 
     cuestionario.resumen();
