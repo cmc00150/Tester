@@ -50,24 +50,22 @@ class Tester {
 	void recogerPreguntaAbcd(string preg);
 
 public:
-	Tester ( string archivo, string flag);
+	Tester ( string archivo, string flag );
 
 	void setPenalizacion(unsigned int pen);
 
 	void limpiarPantalla() { cout << LIMPIARPANTALLA; }
-	void barraProgreso();
-	void espera(float tiempo);
-	void comprobarRespuesta(char respuesta);
+	void barraProgreso( int tam = 0 );
+	void espera( float tiempo );
+	void comprobarRespuesta( char respuesta );
 	void mostrarEnunciado();
     void operator++();
-	void resumen();
+	void resumen( int tam = 0 );
 	void desordenar();
 
     bool fin() { return progreso == preguntas.end(); }
 
 	~Tester();
 };
-
-
 
 #endif //TESTER_H
