@@ -94,7 +94,7 @@ def main():
     hilo.start()
 
     try:
-        respuesta = cliente.models.generate_content(model='gemini-2.0-flash',
+        respuesta = cliente.models.generate_content(model='gemini-2.5-flash',
                                                     contents = [prompt] + imagenes)
     finally:
         evento_terminado.set()
