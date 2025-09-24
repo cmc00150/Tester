@@ -68,22 +68,30 @@ def main():
     tipo = ""
     docpath = None
     doc_url = "https://discovery.ucl.ac.uk/id/eprint/10089234/1/343019_3_art_0_py4t4l_convrt.pdf"
-    for i in range(2, len(sys.argv)):
-        tipo = sys.argv[i].split('.')[-1] 
-        if tipo != "pdf": 
-            with open(sys.argv[i], 'rb') as f:
-                bytesImagen = f.read()
-                imagenes.append(types.Part.from_bytes(
-                                    data=bytesImagen, # Le pasamos la imagen en bytes
-                                    mime_type=f"image/{tipo}") # Dividimos el nombre por el punto y cogemos la extensión al final
-                                ) 
-        else:
-            docpath = pathlib.Path(sys.argv[i])
-            docpath.write_bytes(httpx.get(doc_url).content)
-            types.Part.from_bytes(
-                data=docpath.read_bytes(),
-                mime_type='application/pdf',
-            )
+    try:
+        for i in range(2, len(sys.argv)):
+            tipo = sys.argv[i].split('.')[-1] 
+            if tipo != "pdf": 
+                with open(sys.argv[i], 'rb') as f:
+                    bytesImagen = f.read()
+                    imagenes.append(types.Part.from_bytes(
+                                        data=bytesImagen, # Le pasamos la imagen en bytes
+                                        mime_type=f"image/{tipo}") # Dividimos el nombre por el punto y cogemos la extensión al final
+                                    ) 
+            else:
+                docpath = pathlib.Path(sys.argv[i])
+                docpath.write_bytes(httpx.get(doc_url).content)
+                types.Part.from_bytes(
+                    data=docpath.read_bytes(),
+                    mime_type='application/pdf',
+                )
+
+    except FileNotFoundError:
+        print("Archivo no encontrado")
+        exit(1)
+    except Exception:
+        print("No se ha podido abrir el archivo")
+        exit(1)
 
     if not imagenes and not docpath:
         print("No se han pasado imágenes, por favor, introduce al menos una imagen.")
