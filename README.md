@@ -1,8 +1,4 @@
 # Tester
-> [!caution]
-> ### El _escriba_ se encuentra capado debido a que Google ha quitado la API gratuita de Gemini 2.5 Pro.
-> Sigue funcionando pero actualmente usa Gemini 2.0 Flash, por lo que no acepta pdf y puede que las respuestas sean más tontas. Se recomienda coger el prompt manualmente y usarlo con otros LLM <img src="assets/iconos/openai.svg" width=20px >[(cod. aquí ✋)](https://github.com/cmc00150/Tester/blob/main/escriba/src/main.py). Ganarán esta batalla, pero no la guerra, volveremos. 🪖
-
 El proyecto consta de dos partes:
 <table align="center">
   <tr>
