@@ -10,8 +10,8 @@ El proyecto consta de dos partes:
     <td><img src="assets/logos/Tester_logo.png" width="45%"></td>
   </tr>
   <tr align="center">
-    <td>Se trata de un programa en python que <strong>extrae las preguntas de una imagen</strong>, y te aplica el formato necesario para que el <em>tester</em> lo entienda.</td>
-    <td>Es un programa en C++ que toma como entrada un <strong>archivo con preguntas en .txt, y las muestra</strong> con un formato amigable en la terminal.</td>
+    <td>Es un programa en python que <strong>extrae las preguntas ya hechas de una imagen</strong> y las formatea para que el <em>tester</em> las entienda.</td>
+    <td>Es un programa en C++ que toma como entrada un <strong>archivo con preguntas .txt</strong> (ya sea de opciones o V/F) y te evalua.</td>
   </tr>
 </table>
 
@@ -27,21 +27,20 @@ El proyecto consta de dos partes:
 ### ⬇️ Descarga
 1. Descarga los programas de <a href="https://github.com/cmc00150/Tester/releases/tag/v1.0.0">releases</a>.
 2. Escoge **texter.exe** y **escriba-1.0.0-py3-none-any.whl**.
-### 🏋️‍♂️ Preparación
+### 🏋️‍♂️ Preparación (para el escriba unicamente)
 1. El escriba.whl se puede extraer en tu entorno global de python, pero para tenerlo más organizado lo suyo es que creemos uno solo para él. De forma que luego sea mas facil de desinstalar si asi se quiera.
-   <p></p>
-   
+
    > 1. Creamos una carpeta donde vamos a tener el entorno de python: `mkdir carpeta_venv`.
    > 2. Nos metemos dentro de la carpeta para mayor comodidad: `cd carpeta_venv`.
    > 3. Creamos el entorno venv: `python3 -m venv nombre_del_entorno`.
    > 4. Dentro de la carpeta principal, se habrá creado otra con el nombre del venv. Para activarlo debemos llamar al **activate** dentro de esta: `nombre_del_entorno/Scritps/activate`.
-2. Ahora para extraer el archivo wheel debemos poner: `pip install escriba-1.0.0-py3.whl`.
-3. El ejecutable estará dentro de la carpeta `nombre_del_entorno/Scritps`.
-4. Al pedirte una clave API, deberás cogerla del servicio de google: https://aistudio.google.com/prompts/new_chat. Donde pone `Get API key` (arriba a la derecha).
-5. Pega la key, vuelve a iniciar el escriba y Voilà!!
+3. Ahora para extraer el archivo wheel debemos poner: `pip install escriba-1.0.0-py3.whl`.
+4. El ejecutable estará dentro de la carpeta `nombre_del_entorno/Scritps`.
+5. Al pedirte una clave API, deberás cogerla del servicio de google: https://aistudio.google.com/prompts/new_chat. Donde pone `Get API key` (arriba a la derecha).
+6. Pega la key, vuelve a iniciar el escriba y Voilà!!
 
 > [!IMPORTANT] 
-> Si se hace de forma global, al instalarse aparecerá: `WARNING: The script escriba.exe is installed in 'C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts' which is not on PATH`. Esto lo que te está diciendo es que el **escriba** se ha descargado en esa localizacion y que no es está en el PATH, por lo que si quieres usarlo en otro lado tienes que usar rutas. El ejecutable estará en esa carpeta __Scripts__.
+> Si se hace de forma global, al instalarse aparecerá: `WARNING: The script escriba.exe is installed in 'C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts' which is not on PATH`. A lo que se refiere es que el **escriba** se ha descargado en esa localizacion y no es está en el PATH, por lo que si quieres usarlo en otro lado tienes que usar esa ruta. El ejecutable estará en esa carpeta __Scripts__.
 
 <h2>
   <img src="assets/iconos/apple.svg" width=35px>
@@ -53,16 +52,17 @@ El proyecto consta de dos partes:
 ### ⬇️ Descarga
 1. Descarga los programas de <a href="https://github.com/cmc00150/Tester/releases/tag/v1.0.0">releases</a>.
 2. Escoge tanto **texter** como **escriba-1.0.0-py3-none-any.whl**.
-### 🏋️‍♂️ Preparación
+### 🏋️‍♂️ Preparación (para el escriba unicamente)
 1. El escriba.whl se puede extraer en tu entorno global de python, pero para tenerlo más organizado lo suyo es que creemos uno solo para él. De forma que luego sea mas facil de desinstalar si asi se quiera.
+
    > 1. Creamos una carpeta donde vamos a tener el entorno de python: `mkdir carpeta_venv`.
    > 2. Nos metemos dentro de la carpeta para mayor comodidad: `cd carpeta_venv`.
    > 3. Creamos el entorno venv: `python3 -m venv nombre_del_entorno`.
    > 4. Dentro de la carpeta principal, se habrá creado otra con el nombre del venv. Para activarlo debemos llamar al **activate** dentro de esta: `source nombre_del_entorno/bin/activate`.
-2. Ahora para extraer el archivo wheel debemos poner: `pip install escriba-1.0.0-py3.whl`.
-3. El ejecutable estará dentro de la carpeta `nombre_del_entorno/bin`.
-4. Al pedirte una clave API, deberás cogerla del servicio de google: https://aistudio.google.com/prompts/new_chat. Donde pone `Get API key` (arriba a la derecha).
-5. Pega la key, vuelve a iniciar el escriba y Voilà!!
+3. Ahora para extraer el archivo wheel debemos poner: `pip install escriba-1.0.0-py3.whl`.
+4. El ejecutable estará dentro de la carpeta `nombre_del_entorno/bin`.
+5. Al pedirte una clave API, deberás cogerla del servicio de google: https://aistudio.google.com/prompts/new_chat. Donde pone `Get API key` (arriba a la derecha).
+6. Pega la key, vuelve a iniciar el escriba y Voilà!!
 
 # ✅ Ejecución
 > [!IMPORTANT]
@@ -104,5 +104,7 @@ OPCIONES:
 # ⚠️ Eliminación
 ### Escriba
 Con el entorno de venv activado: `pip uninstall escriba`.
+### Tester
+Basta con borrar el ejecutable.
 ### Tester
 Simplemente se eliminaría borrando el .exe.
