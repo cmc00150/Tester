@@ -107,5 +107,3 @@ También puedes usar los prompts manualmente.
 Con el entorno de venv activado: `pip uninstall escriba`.
 ### Tester
 Basta con borrar el ejecutable.
-### Tester
-Simplemente se eliminaría borrando el .exe.
