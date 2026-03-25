@@ -77,6 +77,30 @@ OPCIONES:
 > [!TIP]
 > Puedes poner './nombre_programa' sin argumentos para ver las opciones en cualquier momento
 
+# 📝 Prompts
+También puedes usar los prompts manualmente.
+## Para preguntas de V/F
+> Te voy a pasar una imagen con una serie de preguntas de tipo verdadero o falso. Necesito que extraigas las preguntas de la imagen. De forma que cada pregunta vaya en una fila. Primero debe de ir el enunciado y luego la respuesta correcta (que deberás resolverla tu para luego poder compararla con la del usuario más tarde), donde el enunciado y la respuesta correcta está separado por la cadena ' - ' (incluidos los espacios). Aparte, si se incluyen cosas como una tabla deberán utilizar carácteres como "\n" para que luego se vea bien sin hacer saltos de linea.
+## Para preguntas de opciones
+> Te voy a pasar una imagen con una serie de preguntas con varias opciones. Necesito que me las extraigas con el formato como en el siguiente ejemplo:
+> 
+> 3) ¿Cuál de las siguientes afirmaciones referentes al planificador a largo plazo es FALSA?
+> 
+>     a) El planificador a largo plazo se encarga de controlar el grado de multiprogramación.
+>    
+>     b) Es el planificador típico de los sistemas de proceso por lotes.
+>    
+>     c) El planificador a largo plazo se encarga de decidir qué procesos de los que están en disco son llevados a memoria principal.
+>    
+>     D) El planificador a largo plazo se encarga de decidir a qué proceso se le asignará la CPU.
+> 
+> Como puedes ver, el enunciado que aparecería en la imagen comienza por el número de la pregunta, seguido 
+> de un paréntesis y un espacio. Luego, cada opción comienza por una letra seguida de un paréntesis y un 
+> espacio (la secuenca a, b, c... debe reiniciarse al terminar cada pregunta). Además, fijate que la 
+> respuesta correcta he sustituido su índice por su mayúscula (en este caso era la d pero podria ser cualquiera
+> de las otras), indicando que esa es la respuesta correta (deberás resolverlos tú). Por último, si se incluyen 
+> cosas como una tabla deberán utilizar carácteres como "\n" para que todo quede en la misma linea pero luego 
+> se imprima bien.
 
 # ⚠️ Eliminación
 ### Escriba
